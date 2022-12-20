@@ -1,0 +1,163 @@
+C:\Users\84964\source\repos\text\text\bin\Debug\text.exe.config
+C:\Users\84964\source\repos\text\text\bin\Debug\text.exe
+C:\Users\84964\source\repos\text\text\bin\Debug\text.pdb
+C:\Users\84964\source\repos\text\text\obj\Debug\text.csproj.AssemblyReference.cache
+C:\Users\84964\source\repos\text\text\obj\Debug\text.csproj.SuggestedBindingRedirects.cache
+C:\Users\84964\source\repos\text\text\obj\Debug\text.Properties.Resources.resources
+C:\Users\84964\source\repos\text\text\obj\Debug\text.csproj.GenerateResource.cache
+C:\Users\84964\source\repos\text\text\obj\Debug\text.csproj.CoreCompileInputs.cache
+C:\Users\84964\source\repos\text\text\obj\Debug\text.exe
+C:\Users\84964\source\repos\text\text\obj\Debug\text.pdb
+C:\Users\84964\source\repos\text\text\obj\Debug\text.Dangnhap.resources
+C:\Users\84964\source\repos\text\text\obj\Debug\text.Trangchu.resources
+C:\Users\84964\source\repos\text\text\obj\Debug\text.DSban.resources
+C:\Users\84964\source\repos\text\text\bin\Debug\aa-DJ\text.resources.dll
+C:\Users\84964\source\repos\text\text\bin\Debug\aa\text.resources.dll
+C:\Users\84964\source\repos\text\text\bin\Debug\vi-VN\text.resources.dll
+C:\Users\84964\source\repos\text\text\obj\Debug\text.DSban.aa-DJ.resources
+C:\Users\84964\source\repos\text\text\obj\Debug\text.DSban.aa.resources
+C:\Users\84964\source\repos\text\text\obj\Debug\text.DSban.vi-VN.resources
+C:\Users\84964\source\repos\text\text\obj\Debug\aa-DJ\text.resources.dll
+C:\Users\84964\source\repos\text\text\obj\Debug\aa\text.resources.dll
+C:\Users\84964\source\repos\text\text\obj\Debug\vi-VN\text.resources.dll
+C:\Users\84964\source\repos\text\text\obj\Debug\text.TaiKhoan.resources
+C:\Users\84964\source\repos\text\text\obj\Debug\text.DatLaiMatKhau.resources
+C:\Users\84964\source\repos\text\text\bin\Debug\Microsoft.Data.Tools.Components.dll
+C:\Users\84964\source\repos\text\text\bin\Debug\Microsoft.Data.Tools.Schema.Sql.dll
+C:\Users\84964\source\repos\text\text\bin\Debug\Microsoft.Data.Tools.Schema.Sql.UnitTesting.dll
+C:\Users\84964\source\repos\text\text\bin\Debug\Microsoft.Data.Tools.Schema.Sql.UnitTestingAdapter.dll
+C:\Users\84964\source\repos\text\text\bin\Debug\Microsoft.Data.Tools.Utilities.dll
+C:\Users\84964\source\repos\text\text\bin\Debug\Microsoft.SqlServer.TransactSql.ScriptDom.dll
+C:\Users\84964\source\repos\text\text\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\84964\source\repos\text\text\obj\Debug\text.exe.config
+C:\Users\84964\source\repos\text\text\obj\Debug\text.csproj.CopyComplete
+C:\Users\minht\source\repos\text\text\bin\Debug\text.exe.config
+C:\Users\minht\source\repos\text\text\bin\Debug\text.exe
+C:\Users\minht\source\repos\text\text\bin\Debug\text.pdb
+C:\Users\minht\source\repos\text\text\bin\Debug\aa-DJ\text.resources.dll
+C:\Users\minht\source\repos\text\text\bin\Debug\aa\text.resources.dll
+C:\Users\minht\source\repos\text\text\bin\Debug\vi-VN\text.resources.dll
+C:\Users\minht\source\repos\text\text\bin\Debug\Microsoft.Data.Tools.Components.dll
+C:\Users\minht\source\repos\text\text\obj\Debug\text.csproj.AssemblyReference.cache
+C:\Users\minht\source\repos\text\text\obj\Debug\text.DatLaiMatKhau.resources
+C:\Users\minht\source\repos\text\text\obj\Debug\text.Dangnhap.resources
+C:\Users\minht\source\repos\text\text\obj\Debug\text.Trangchu.resources
+C:\Users\minht\source\repos\text\text\obj\Debug\text.DSban.resources
+C:\Users\minht\source\repos\text\text\obj\Debug\text.Properties.Resources.resources
+C:\Users\minht\source\repos\text\text\obj\Debug\text.TaiKhoan.resources
+C:\Users\minht\source\repos\text\text\obj\Debug\text.DSban.aa-DJ.resources
+C:\Users\minht\source\repos\text\text\obj\Debug\text.DSban.aa.resources
+C:\Users\minht\source\repos\text\text\obj\Debug\text.DSban.vi-VN.resources
+C:\Users\minht\source\repos\text\text\obj\Debug\text.csproj.GenerateResource.cache
+C:\Users\minht\source\repos\text\text\obj\Debug\text.csproj.CoreCompileInputs.cache
+C:\Users\minht\source\repos\text\text\obj\Debug\aa-DJ\text.resources.dll
+C:\Users\minht\source\repos\text\text\obj\Debug\aa\text.resources.dll
+C:\Users\minht\source\repos\text\text\obj\Debug\vi-VN\text.resources.dll
+C:\Users\minht\source\repos\text\text\obj\Debug\text.csproj.CopyComplete
+C:\Users\minht\source\repos\text\text\obj\Debug\text.exe
+C:\Users\minht\source\repos\text\text\obj\Debug\text.pdb
+C:\Users\minht\source\repos\text\text\obj\Debug\text.DoanhThu.resources
+C:\Users\minht\source\repos\text\text\obj\Debug\text.ThucDon.resources
+C:\Users\84964\source\repos\text\text\obj\Debug\text.DoanhThu.resources
+C:\Users\84964\source\repos\text\text\obj\Debug\text.ThucDon.resources
+C:\Users\84964\source\repos\text\text\obj\Debug\text.HoaDon.resources
+C:\Users\84964\OneDrive\Tài liệu\text\text\bin\Debug\text.exe.config
+C:\Users\84964\OneDrive\Tài liệu\text\text\bin\Debug\text.exe
+C:\Users\84964\OneDrive\Tài liệu\text\text\bin\Debug\text.pdb
+C:\Users\84964\OneDrive\Tài liệu\text\text\bin\Debug\aa-DJ\text.resources.dll
+C:\Users\84964\OneDrive\Tài liệu\text\text\bin\Debug\aa\text.resources.dll
+C:\Users\84964\OneDrive\Tài liệu\text\text\bin\Debug\vi-VN\text.resources.dll
+C:\Users\84964\OneDrive\Tài liệu\text\text\bin\Debug\Microsoft.Data.Tools.Components.dll
+C:\Users\84964\OneDrive\Tài liệu\text\text\bin\Debug\Microsoft.Data.Tools.Schema.Sql.dll
+C:\Users\84964\OneDrive\Tài liệu\text\text\bin\Debug\Microsoft.Data.Tools.Schema.Sql.UnitTesting.dll
+C:\Users\84964\OneDrive\Tài liệu\text\text\bin\Debug\Microsoft.Data.Tools.Schema.Sql.UnitTestingAdapter.dll
+C:\Users\84964\OneDrive\Tài liệu\text\text\bin\Debug\Microsoft.Data.Tools.Utilities.dll
+C:\Users\84964\OneDrive\Tài liệu\text\text\bin\Debug\Microsoft.SqlServer.TransactSql.ScriptDom.dll
+C:\Users\84964\OneDrive\Tài liệu\text\text\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\84964\OneDrive\Tài liệu\text\text\obj\Debug\text.csproj.AssemblyReference.cache
+C:\Users\84964\OneDrive\Tài liệu\text\text\obj\Debug\text.csproj.SuggestedBindingRedirects.cache
+C:\Users\84964\OneDrive\Tài liệu\text\text\obj\Debug\text.exe.config
+C:\Users\84964\OneDrive\Tài liệu\text\text\obj\Debug\text.DoanhThu.resources
+C:\Users\84964\OneDrive\Tài liệu\text\text\obj\Debug\text.DatLaiMatKhau.resources
+C:\Users\84964\OneDrive\Tài liệu\text\text\obj\Debug\text.Dangnhap.resources
+C:\Users\84964\OneDrive\Tài liệu\text\text\obj\Debug\text.HoaDon.resources
+C:\Users\84964\OneDrive\Tài liệu\text\text\obj\Debug\text.ThucDon.resources
+C:\Users\84964\OneDrive\Tài liệu\text\text\obj\Debug\text.Trangchu.resources
+C:\Users\84964\OneDrive\Tài liệu\text\text\obj\Debug\text.DSban.resources
+C:\Users\84964\OneDrive\Tài liệu\text\text\obj\Debug\text.Properties.Resources.resources
+C:\Users\84964\OneDrive\Tài liệu\text\text\obj\Debug\text.TaiKhoan.resources
+C:\Users\84964\OneDrive\Tài liệu\text\text\obj\Debug\text.DSban.aa-DJ.resources
+C:\Users\84964\OneDrive\Tài liệu\text\text\obj\Debug\text.DSban.aa.resources
+C:\Users\84964\OneDrive\Tài liệu\text\text\obj\Debug\text.DSban.vi-VN.resources
+C:\Users\84964\OneDrive\Tài liệu\text\text\obj\Debug\text.csproj.GenerateResource.cache
+C:\Users\84964\OneDrive\Tài liệu\text\text\obj\Debug\text.csproj.CoreCompileInputs.cache
+C:\Users\84964\OneDrive\Tài liệu\text\text\obj\Debug\aa-DJ\text.resources.dll
+C:\Users\84964\OneDrive\Tài liệu\text\text\obj\Debug\aa\text.resources.dll
+C:\Users\84964\OneDrive\Tài liệu\text\text\obj\Debug\vi-VN\text.resources.dll
+C:\Users\84964\OneDrive\Tài liệu\text\text\obj\Debug\text.csproj.CopyComplete
+C:\Users\84964\OneDrive\Tài liệu\text\text\obj\Debug\text.exe
+C:\Users\84964\OneDrive\Tài liệu\text\text\obj\Debug\text.pdb
+C:\Users\minht\Downloads\text\text\bin\Debug\text.exe.config
+C:\Users\minht\Downloads\text\text\bin\Debug\text.exe
+C:\Users\minht\Downloads\text\text\bin\Debug\text.pdb
+C:\Users\minht\Downloads\text\text\bin\Debug\aa-DJ\text.resources.dll
+C:\Users\minht\Downloads\text\text\bin\Debug\aa\text.resources.dll
+C:\Users\minht\Downloads\text\text\bin\Debug\vi-VN\text.resources.dll
+C:\Users\minht\Downloads\text\text\bin\Debug\Microsoft.Data.Tools.Components.dll
+C:\Users\minht\Downloads\text\text\obj\Debug\text.csproj.AssemblyReference.cache
+C:\Users\minht\Downloads\text\text\obj\Debug\text.DoanhThu.resources
+C:\Users\minht\Downloads\text\text\obj\Debug\text.DatLaiMatKhau.resources
+C:\Users\minht\Downloads\text\text\obj\Debug\text.Dangnhap.resources
+C:\Users\minht\Downloads\text\text\obj\Debug\text.HoaDon.resources
+C:\Users\minht\Downloads\text\text\obj\Debug\text.ThucDon.resources
+C:\Users\minht\Downloads\text\text\obj\Debug\text.Trangchu.resources
+C:\Users\minht\Downloads\text\text\obj\Debug\text.DSban.resources
+C:\Users\minht\Downloads\text\text\obj\Debug\text.Properties.Resources.resources
+C:\Users\minht\Downloads\text\text\obj\Debug\text.TaiKhoan.resources
+C:\Users\minht\Downloads\text\text\obj\Debug\text.DSban.aa-DJ.resources
+C:\Users\minht\Downloads\text\text\obj\Debug\text.DSban.aa.resources
+C:\Users\minht\Downloads\text\text\obj\Debug\text.DSban.vi-VN.resources
+C:\Users\minht\Downloads\text\text\obj\Debug\text.csproj.GenerateResource.cache
+C:\Users\minht\Downloads\text\text\obj\Debug\text.csproj.CoreCompileInputs.cache
+C:\Users\minht\Downloads\text\text\obj\Debug\aa-DJ\text.resources.dll
+C:\Users\minht\Downloads\text\text\obj\Debug\aa\text.resources.dll
+C:\Users\minht\Downloads\text\text\obj\Debug\vi-VN\text.resources.dll
+C:\Users\minht\Downloads\text\text\obj\Debug\text.csproj.CopyComplete
+C:\Users\minht\Downloads\text\text\obj\Debug\text.exe
+C:\Users\minht\Downloads\text\text\obj\Debug\text.pdb
+C:\Users\ACER\Desktop\doancs\text (1)\text\bin\Debug\text.exe.config
+C:\Users\ACER\Desktop\doancs\text (1)\text\bin\Debug\text.exe
+C:\Users\ACER\Desktop\doancs\text (1)\text\bin\Debug\text.pdb
+C:\Users\ACER\Desktop\doancs\text (1)\text\bin\Debug\aa-DJ\text.resources.dll
+C:\Users\ACER\Desktop\doancs\text (1)\text\bin\Debug\aa\text.resources.dll
+C:\Users\ACER\Desktop\doancs\text (1)\text\bin\Debug\vi-VN\text.resources.dll
+C:\Users\ACER\Desktop\doancs\text (1)\text\bin\Debug\Microsoft.Data.Tools.Components.dll
+C:\Users\ACER\Desktop\doancs\text (1)\text\bin\Debug\Microsoft.Data.Tools.Schema.Sql.dll
+C:\Users\ACER\Desktop\doancs\text (1)\text\bin\Debug\Microsoft.Data.Tools.Schema.Sql.UnitTesting.dll
+C:\Users\ACER\Desktop\doancs\text (1)\text\bin\Debug\Microsoft.Data.Tools.Schema.Sql.UnitTestingAdapter.dll
+C:\Users\ACER\Desktop\doancs\text (1)\text\bin\Debug\Microsoft.Data.Tools.Utilities.dll
+C:\Users\ACER\Desktop\doancs\text (1)\text\bin\Debug\Microsoft.SqlServer.TransactSql.ScriptDom.dll
+C:\Users\ACER\Desktop\doancs\text (1)\text\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\ACER\Desktop\doancs\text (1)\text\obj\Debug\text.csproj.AssemblyReference.cache
+C:\Users\ACER\Desktop\doancs\text (1)\text\obj\Debug\text.csproj.SuggestedBindingRedirects.cache
+C:\Users\ACER\Desktop\doancs\text (1)\text\obj\Debug\text.exe.config
+C:\Users\ACER\Desktop\doancs\text (1)\text\obj\Debug\text.DoanhThu.resources
+C:\Users\ACER\Desktop\doancs\text (1)\text\obj\Debug\text.DatLaiMatKhau.resources
+C:\Users\ACER\Desktop\doancs\text (1)\text\obj\Debug\text.Dangnhap.resources
+C:\Users\ACER\Desktop\doancs\text (1)\text\obj\Debug\text.HoaDon.resources
+C:\Users\ACER\Desktop\doancs\text (1)\text\obj\Debug\text.ThucDon.resources
+C:\Users\ACER\Desktop\doancs\text (1)\text\obj\Debug\text.Trangchu.resources
+C:\Users\ACER\Desktop\doancs\text (1)\text\obj\Debug\text.DSban.resources
+C:\Users\ACER\Desktop\doancs\text (1)\text\obj\Debug\text.Properties.Resources.resources
+C:\Users\ACER\Desktop\doancs\text (1)\text\obj\Debug\text.TaiKhoan.resources
+C:\Users\ACER\Desktop\doancs\text (1)\text\obj\Debug\text.DSban.aa-DJ.resources
+C:\Users\ACER\Desktop\doancs\text (1)\text\obj\Debug\text.DSban.aa.resources
+C:\Users\ACER\Desktop\doancs\text (1)\text\obj\Debug\text.DSban.vi-VN.resources
+C:\Users\ACER\Desktop\doancs\text (1)\text\obj\Debug\text.csproj.GenerateResource.cache
+C:\Users\ACER\Desktop\doancs\text (1)\text\obj\Debug\text.csproj.CoreCompileInputs.cache
+C:\Users\ACER\Desktop\doancs\text (1)\text\obj\Debug\aa-DJ\text.resources.dll
+C:\Users\ACER\Desktop\doancs\text (1)\text\obj\Debug\aa\text.resources.dll
+C:\Users\ACER\Desktop\doancs\text (1)\text\obj\Debug\vi-VN\text.resources.dll
+C:\Users\ACER\Desktop\doancs\text (1)\text\obj\Debug\text.csproj.CopyComplete
+C:\Users\ACER\Desktop\doancs\text (1)\text\obj\Debug\text.exe
+C:\Users\ACER\Desktop\doancs\text (1)\text\obj\Debug\text.pdb

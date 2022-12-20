@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<settings>
+	<database>
+		<!--Data Source=localhost;Initial Catalog=DOAN;Integrated Security=True-->
+		<serverName>localhost</serverName>
+		<databaseName>DOAN</databaseName>
+		<skipLogin>true</skipLogin>
+	</database>
+</settings> 
