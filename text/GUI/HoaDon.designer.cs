@@ -154,6 +154,7 @@ namespace text
             // 
             this.Switch_from.BackColor = System.Drawing.Color.PaleGreen;
             this.Switch_from.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Switch_from.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Switch_from.FormattingEnabled = true;
             this.Switch_from.Location = new System.Drawing.Point(3, 3);
             this.Switch_from.Name = "Switch_from";
@@ -197,6 +198,7 @@ namespace text
             // 
             this.Switch_to.BackColor = System.Drawing.Color.PaleGreen;
             this.Switch_to.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Switch_to.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Switch_to.FormattingEnabled = true;
             this.Switch_to.Location = new System.Drawing.Point(3, 30);
             this.Switch_to.Name = "Switch_to";
@@ -248,23 +250,23 @@ namespace text
             // 
             this.FoodName.BackColor = System.Drawing.Color.PaleGreen;
             this.FoodName.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.FoodName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.FoodName.FormattingEnabled = true;
             this.FoodName.Location = new System.Drawing.Point(3, 29);
             this.FoodName.Name = "FoodName";
             this.FoodName.Size = new System.Drawing.Size(138, 21);
             this.FoodName.TabIndex = 3;
-            this.FoodName.Text = "Name";
             // 
             // Category
             // 
             this.Category.BackColor = System.Drawing.Color.PaleGreen;
             this.Category.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Category.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Category.FormattingEnabled = true;
             this.Category.Location = new System.Drawing.Point(3, 3);
             this.Category.Name = "Category";
             this.Category.Size = new System.Drawing.Size(138, 21);
             this.Category.TabIndex = 2;
-            this.Category.Text = "Category";
             this.Category.SelectedIndexChanged += new System.EventHandler(this.Category_SelectedIndexChanged);
             // 
             // Quantity

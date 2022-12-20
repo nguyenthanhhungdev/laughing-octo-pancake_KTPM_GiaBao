@@ -21,6 +21,7 @@ namespace text
         }
         private void RefreshCategory()
         {
+            Category.SelectedIndex = -1;
             var foodCategories = FoodCategoryDAO.getFoodCategories();
             var rowList = foodCategories.Select(category => new DbCombobox() { ID = category.FoodId, Name = category.Name }).ToList();
             Category.DataSource = rowList;
@@ -28,6 +29,7 @@ namespace text
         }
         private void RefreshName()
         {
+            FoodName.SelectedIndex = -1;
             var foods = FoodDAO.Instance.GetFoodByCateGoryID((int)Category.SelectedValue);
             var rowList = foods.Select(food => new DbCombobox() { ID = food.ID, Name = food.Name }).ToList();
             FoodName.DataSource = rowList;
