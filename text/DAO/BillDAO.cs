@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using text.DTO;
 
 namespace text.DAO
@@ -36,6 +37,11 @@ namespace text.DAO
         }
         public static Boolean InsertBill(Bill bill, List<BillDetail> details)
         {
+            if (Program.skipLogin)
+            {
+                MessageBox.Show("Dang o che do test, se khong thuc su query vao CSDL", "Thong bao", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return true;
+            }
             try
             {
                 int newBillId = (int)DataProvider.Instance.ExecuteQuery(bill.Creation != null ? String.Format(

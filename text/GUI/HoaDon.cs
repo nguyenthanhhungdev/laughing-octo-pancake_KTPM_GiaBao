@@ -128,10 +128,14 @@ namespace text
             {
                 details.Add(new DTO.BillDetail((int)item.Tag, int.Parse(item.SubItems[2].Text)));
             }
+            if (details.Count == 0)
+            {
+                return;
+            }
             if (BillDAO.InsertBill(new DTO.Bill(Program.currentlyLoggedInAs, 1, (int)Discount.Value, Decimal.Parse(Price.Text)), details))
             {
                 MessageBox.Show("Luu hoa don vao CSDL", "Thong bao", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                Receipt.Clear();
+                Receipt.Items.Clear();
             }
             else
             {

@@ -4,6 +4,6 @@
 		<!--Data Source=localhost;Initial Catalog=DOAN;Integrated Security=True-->
 		<serverName>localhost</serverName>
 		<databaseName>DOAN</databaseName>
-		<skipLogin>true</skipLogin>
+		<skipLogin>false</skipLogin>
 	</database>
 </settings> 
