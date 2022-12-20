@@ -110,7 +110,7 @@ namespace text
             {
                 return;
             }
-            var daFood = FoodDAO.Instance.GetFoodByCateGoryID((int)FoodName.SelectedValue)[0];
+            var daFood = FoodDAO.GetFood((int)FoodName.SelectedValue);
             ReceiptAdd(daFood.ID, daFood.Name, daFood.Price, (int)Quantity.Value);
         }
         private void Delete_Click(object sender, EventArgs e)

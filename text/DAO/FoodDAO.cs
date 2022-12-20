@@ -94,5 +94,11 @@ namespace text.DAO
 
             return result > 0;
         } 
+
+        public static Food GetFood(int id)
+        {
+            return new Food(DataProvider.Instance.ExecuteQuery("SELECT * FROM Food WHERE id=" + id).Rows[0]);
+
+        }
     }
 }
