@@ -17,6 +17,8 @@ namespace text
             Category.ValueMember = "ID";
             FoodName.DisplayMember = "Name";
             FoodName.ValueMember = "ID";
+
+            Discount.Value = 10;
             RefreshAll();
         }
         private void RefreshCategory()
@@ -41,7 +43,7 @@ namespace text
             {
                 sum += Decimal.Parse(item.SubItems[3].Text);
             }
-            Price.Text = sum.ToString();
+            Price.Text = (sum - sum / 100 * Discount.Value).ToString();
         }
 
         // TODO: CHUA CO DAO DTO DSBan
@@ -122,7 +124,7 @@ namespace text
         private void Payment_Click(object sender, EventArgs e)
         {
             var details = new List<DTO.BillDetail>();
-            foreach(ListViewItem item in Receipt.Items)
+            foreach (ListViewItem item in Receipt.Items)
             {
                 details.Add(new DTO.BillDetail((int)item.Tag, int.Parse(item.SubItems[2].Text)));
             }
@@ -130,7 +132,8 @@ namespace text
             {
                 MessageBox.Show("Luu hoa don vao CSDL", "Thong bao", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Receipt.Clear();
-            } else
+            }
+            else
             {
                 MessageBox.Show("Luu hoa don vao CSDL that bai", "Thong bao loi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
