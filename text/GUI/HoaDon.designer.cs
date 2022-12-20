@@ -208,7 +208,7 @@ namespace text
             this.tableLayoutPanel3.ColumnCount = 3;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.6993F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.3007F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 55F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 51F));
             this.tableLayoutPanel3.Controls.Add(this.Add, 1, 0);
             this.tableLayoutPanel3.Controls.Add(this.FoodName, 0, 1);
             this.tableLayoutPanel3.Controls.Add(this.Category, 0, 0);
@@ -233,10 +233,10 @@ namespace text
             this.Add.Font = new System.Drawing.Font("Segoe UI", 12.75F);
             this.Add.Image = ((System.Drawing.Image)(resources.GetObject("Add.Image")));
             this.Add.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Add.Location = new System.Drawing.Point(145, 3);
+            this.Add.Location = new System.Drawing.Point(147, 3);
             this.Add.Name = "Add";
             this.tableLayoutPanel3.SetRowSpan(this.Add, 2);
-            this.Add.Size = new System.Drawing.Size(133, 46);
+            this.Add.Size = new System.Drawing.Size(135, 46);
             this.Add.TabIndex = 4;
             this.Add.Text = "Thêm món";
             this.Add.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -251,7 +251,7 @@ namespace text
             this.FoodName.FormattingEnabled = true;
             this.FoodName.Location = new System.Drawing.Point(3, 29);
             this.FoodName.Name = "FoodName";
-            this.FoodName.Size = new System.Drawing.Size(136, 21);
+            this.FoodName.Size = new System.Drawing.Size(138, 21);
             this.FoodName.TabIndex = 3;
             this.FoodName.Text = "Name";
             // 
@@ -262,22 +262,23 @@ namespace text
             this.Category.FormattingEnabled = true;
             this.Category.Location = new System.Drawing.Point(3, 3);
             this.Category.Name = "Category";
-            this.Category.Size = new System.Drawing.Size(136, 21);
+            this.Category.Size = new System.Drawing.Size(138, 21);
             this.Category.TabIndex = 2;
             this.Category.Text = "Category";
+            this.Category.SelectedIndexChanged += new System.EventHandler(this.Category_SelectedIndexChanged);
             // 
             // Quantity
             // 
             this.Quantity.BackColor = System.Drawing.Color.PaleGreen;
             this.Quantity.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.Quantity.Location = new System.Drawing.Point(284, 3);
+            this.Quantity.Location = new System.Drawing.Point(288, 3);
             this.Quantity.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             0});
             this.Quantity.Name = "Quantity";
-            this.Quantity.Size = new System.Drawing.Size(50, 20);
+            this.Quantity.Size = new System.Drawing.Size(46, 20);
             this.Quantity.TabIndex = 5;
             this.Quantity.Value = new decimal(new int[] {
             1,
@@ -326,9 +327,9 @@ namespace text
             // Delete
             // 
             this.Delete.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Delete.Location = new System.Drawing.Point(284, 29);
+            this.Delete.Location = new System.Drawing.Point(288, 29);
             this.Delete.Name = "Delete";
-            this.Delete.Size = new System.Drawing.Size(50, 20);
+            this.Delete.Size = new System.Drawing.Size(46, 20);
             this.Delete.TabIndex = 7;
             this.Delete.Text = "Xoa";
             this.Delete.UseVisualStyleBackColor = true;
@@ -339,8 +340,8 @@ namespace text
             this.tableLayoutPanel4.ColumnCount = 4;
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45.58139F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 54.41861F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 63F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 74F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 48F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 75F));
             this.tableLayoutPanel4.Controls.Add(this.Payment, 2, 0);
             this.tableLayoutPanel4.Controls.Add(this.Discount, 1, 0);
             this.tableLayoutPanel4.Controls.Add(this.label4, 0, 1);
@@ -363,10 +364,10 @@ namespace text
             this.Payment.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.Payment.Image = ((System.Drawing.Image)(resources.GetObject("Payment.Image")));
             this.Payment.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Payment.Location = new System.Drawing.Point(202, 3);
+            this.Payment.Location = new System.Drawing.Point(216, 3);
             this.Payment.Name = "Payment";
             this.tableLayoutPanel4.SetRowSpan(this.Payment, 2);
-            this.Payment.Size = new System.Drawing.Size(132, 49);
+            this.Payment.Size = new System.Drawing.Size(118, 49);
             this.Payment.TabIndex = 8;
             this.Payment.Text = "Thanh toán";
             this.Payment.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -377,9 +378,9 @@ namespace text
             // 
             this.Discount.BackColor = System.Drawing.Color.PaleGreen;
             this.Discount.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.Discount.Location = new System.Drawing.Point(94, 4);
+            this.Discount.Location = new System.Drawing.Point(100, 4);
             this.Discount.Name = "Discount";
-            this.Discount.Size = new System.Drawing.Size(102, 20);
+            this.Discount.Size = new System.Drawing.Size(110, 20);
             this.Discount.TabIndex = 6;
             this.Discount.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.Discount.Value = new decimal(new int[] {
@@ -397,7 +398,7 @@ namespace text
             this.label4.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.label4.Location = new System.Drawing.Point(3, 27);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(85, 28);
+            this.label4.Size = new System.Drawing.Size(91, 28);
             this.label4.TabIndex = 1;
             this.label4.Text = "Thành tiền";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -410,7 +411,7 @@ namespace text
             this.label3.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.label3.Location = new System.Drawing.Point(3, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(85, 27);
+            this.label3.Size = new System.Drawing.Size(91, 27);
             this.label3.TabIndex = 0;
             this.label3.Text = "Giảm giá (%)";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -419,9 +420,9 @@ namespace text
             // 
             this.Price.BackColor = System.Drawing.Color.PaleGreen;
             this.Price.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Price.Location = new System.Drawing.Point(94, 30);
+            this.Price.Location = new System.Drawing.Point(100, 30);
             this.Price.Name = "Price";
-            this.Price.Size = new System.Drawing.Size(102, 20);
+            this.Price.Size = new System.Drawing.Size(110, 20);
             this.Price.TabIndex = 7;
             // 
             // Tables

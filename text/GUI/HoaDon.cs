@@ -13,6 +13,10 @@ namespace text
         public HoaDon()
         {
             InitializeComponent();
+            Category.DisplayMember = "Name";
+            Category.ValueMember = "ID";
+            FoodName.DisplayMember = "Name";
+            FoodName.ValueMember = "ID";
             RefreshAll();
         }
         private void RefreshCategory()
@@ -20,8 +24,6 @@ namespace text
             var foodCategories = FoodCategoryDAO.getFoodCategories();
             var rowList = foodCategories.Select(category => new DbCombobox() { ID = category.FoodId, Name = category.Name }).ToList();
             Category.DataSource = rowList;
-            Category.DisplayMember = "Name";
-            Category.ValueMember = "ID";
             RefreshName();
         }
         private void RefreshName()
@@ -29,8 +31,6 @@ namespace text
             var foods = FoodDAO.Instance.GetFoodByCateGoryID((int)Category.SelectedValue);
             var rowList = foods.Select(food => new DbCombobox() { ID = food.ID, Name = food.Name }).ToList();
             FoodName.DataSource = rowList;
-            FoodName.DisplayMember = "Name";
-            FoodName.ValueMember = "ID";
         }
         private void RefreshPrice()
         {
@@ -247,6 +247,15 @@ namespace text
         {
             public int ID { get; set; }
             public Boolean Mode { get; set; }
+        }
+
+        private void Category_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (Category.SelectedIndex < 0)
+            {
+                return;
+            }
+            RefreshName();
         }
     }
 }
