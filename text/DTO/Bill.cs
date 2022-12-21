@@ -9,7 +9,7 @@ namespace text.DTO
 {
     internal class Bill
     {
-        public Bill(int iD, int iDNhanvien, int status, int discount, decimal total, DateTime? creation)
+        public Bill(int iD, int iDNhanvien, int status, int discount, decimal total, DateTime? creation, int iDTable)
         {
             ID = iD;
             IDNhanvien = iDNhanvien;
@@ -17,9 +17,10 @@ namespace text.DTO
             Discount = discount;
             Total = total;
             Creation = creation;
+            IDTable = iDTable;
         }
-        public Bill(int iDNhanvien, int status, int discount, decimal total)
-            : this(0, iDNhanvien, status, discount, total, null)
+        public Bill(int iDNhanvien, int status, int discount, decimal total, int iDTable)
+            : this(0, iDNhanvien, status, discount, total, null, iDTable)
         {
             // DO NOT DELETE
         }
@@ -31,6 +32,7 @@ namespace text.DTO
             Discount = (int)dataRow["discount"];
             Total = (decimal)dataRow["total"];
             Creation = DateTime.ParseExact((string)dataRow["creation"], dateFormat, CultureInfo.InvariantCulture);
+            IDTable = (int)dataRow["idTable"];
             Items = items;
         }
         public Bill(DataRow dataRow) : this(dataRow, DAO.BillDAO.GetBillDetails((int)dataRow["id"]))
@@ -43,6 +45,7 @@ namespace text.DTO
         public int Discount { get; set; }
         public decimal Total { get; set; }
         public DateTime? Creation { get; set; }
+        public int IDTable { get; set; }
         public List<BillDetail> Items { get; set; }
         public static readonly string dateFormat = "yyyy/MM/dd";
     }

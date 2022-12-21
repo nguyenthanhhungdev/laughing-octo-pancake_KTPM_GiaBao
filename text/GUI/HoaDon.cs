@@ -63,7 +63,10 @@ namespace text
             var rowList = tables.Select(table => new DbCombobox() { ID = table.Id, Name = table.Name }).ToList();
             Switch_to.DataSource = rowList;
             Switch_from.DataSource = new List<DbCombobox>(rowList);
-            Table.DataSource = new List<DbCombobox>(rowList);
+            if (Table.DataSource == null)
+            {
+                Table.DataSource = new List<DbCombobox>(rowList);
+            }
             return tables;
         }
         private void RefreshTables()
@@ -123,7 +126,7 @@ namespace text
             {
                 return;
             }
-            if (BillDAO.InsertBill(new DTO.Bill(Program.currentlyLoggedInAs, 1, (int)Discount.Value, Decimal.Parse(Price.Text)), details))
+            if (BillDAO.InsertBill(new DTO.Bill(Program.currentlyLoggedInAs, 1, (int)Discount.Value, Decimal.Parse(Price.Text), (int)Table.SelectedValue), details))
             {
                 MessageBox.Show("Luu hoa don vao CSDL", "Thong bao", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Receipt.Items.Clear();

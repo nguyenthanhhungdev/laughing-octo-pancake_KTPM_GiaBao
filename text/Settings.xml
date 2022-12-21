@@ -9,6 +9,6 @@
 		<!--<serverName>localhost\sqlexpress</serverName>
 		<databaseName>Data</databaseName>-->
 		
-		<skipLogin>true</skipLogin>
+		<skipLogin>false</skipLogin>
 	</database>
 </settings> 
