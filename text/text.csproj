@@ -57,10 +57,16 @@
   <ItemGroup>
     <Compile Include="DAO\BillDAO.cs" />
     <Compile Include="DAO\CategoryDAO.cs" />
+    <Compile Include="DAO\Receipt.cs" />
     <Compile Include="DAO\DataProvider.cs" />
     <Compile Include="DAO\DsbanDAO.cs" />
     <Compile Include="DAO\FoodCategoryDAO.cs" />
     <Compile Include="DAO\FoodDAO.cs" />
+    <Compile Include="DAO\ReceiptRuntimeTextTemplate.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReceiptRuntimeTextTemplate.tt</DependentUpon>
+    </Compile>
     <Compile Include="DAO\TaikhoanDao.cs" />
     <Compile Include="DataDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -72,6 +78,12 @@
     <Compile Include="DTO\DsbanDTO.cs" />
     <Compile Include="DTO\Food.cs" />
     <Compile Include="DTO\taikhoanDTO.cs" />
+    <Compile Include="GUI\ReceiptPreview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ReceiptPreview.Designer.cs">
+      <DependentUpon>ReceiptPreview.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\DnDoimk.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,12 +107,6 @@
     </Compile>
     <Compile Include="GUI\Dangnhap.Designer.cs">
       <DependentUpon>Dangnhap.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\ReceiptReport.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\ReceiptReport.Designer.cs">
-      <DependentUpon>ReceiptReport.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\HoaDon.cs">
       <SubType>Form</SubType>
@@ -134,6 +140,9 @@
     <Compile Include="GUI\TaiKhoan.designer.cs">
       <DependentUpon>TaiKhoan.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="GUI\ReceiptPreview.resx">
+      <DependentUpon>ReceiptPreview.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\DnDoimk.resx">
       <DependentUpon>DnDoimk.cs</DependentUpon>
     </EmbeddedResource>
@@ -222,7 +231,9 @@
   <ItemGroup>
     <None Include="Resources\them1.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
   <ItemGroup Condition="$(VisualStudioVersion) == '17.0'">
     <Reference Include="Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>$(SSDTPath)\Microsoft.Data.Tools.Schema.Sql.dll</HintPath>
@@ -238,6 +249,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="DAO\ReceiptRuntimeTextTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>ReceiptRuntimeTextTemplate.cs</LastGenOutput>
+    </Content>
     <Content Include="Resources\add-product.png" />
     <Content Include="Resources\fastfood1.png" />
     <Content Include="Settings.xml" />
@@ -249,6 +264,9 @@
     <Content Include="Resources\conference-room.png" />
     <None Include="Resources\discount-badge.png" />
     <Content Include="Resources\fastfood.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="obj\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

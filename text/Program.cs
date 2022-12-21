@@ -25,7 +25,7 @@ namespace text
             dataSource = database.Element("serverName")?.Value ?? dataSource;
             initialCatalog = database.Element("databaseName")?.Value ?? initialCatalog;
             finalConnectionString = String.Format("Data Source={0};Initial Catalog={1};Integrated Security=True", dataSource, initialCatalog);
-            skipLogin = Boolean.Parse(database.Element("behavior")?.Element("skipLogin")?.Value ?? "false");
+            skipLogin = Boolean.Parse(settings.Element("behavior")?.Element("skipLogin")?.Value ?? "false");
             if (skipLogin)
             {
                 Application.Run(new Trangchu());

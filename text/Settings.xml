@@ -9,7 +9,7 @@
 		<databaseName>Data</databaseName>-->
   </database>
   <behavior>
-    <skipLogin>false</skipLogin>
+    <skipLogin>true</skipLogin>
   </behavior>
   <data>
     <username>van_thanh_cong</username>

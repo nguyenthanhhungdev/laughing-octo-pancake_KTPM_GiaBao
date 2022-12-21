@@ -177,6 +177,7 @@ namespace text
             this.PrintReceipt.Text = "In hóa đơn";
             this.PrintReceipt.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.PrintReceipt.UseVisualStyleBackColor = false;
+            this.PrintReceipt.Click += new System.EventHandler(this.PrintReceipt_Click);
             // 
             // Switch
             // 

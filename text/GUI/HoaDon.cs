@@ -117,12 +117,8 @@ namespace text
         }
         private void Payment_Click(object sender, EventArgs e)
         {
-            var details = new List<DTO.BillDetail>();
-            foreach (ListViewItem item in Receipt.Items)
-            {
-                details.Add(new DTO.BillDetail((int)item.Tag, int.Parse(item.SubItems[2].Text)));
-            }
-            if (details.Count == 0)
+            var details = GrabReceiptDetails();
+            if (details == null)
             {
                 return;
             }
@@ -190,6 +186,15 @@ namespace text
             DsbanDAO.UpdateTable((int)first.Tag, second.Mode);
             DsbanDAO.UpdateTable((int)second.Tag, first.Mode);
         }
+        private List<DTO.BillDetail> GrabReceiptDetails()
+        {
+            var details = new List<DTO.BillDetail>();
+            foreach (ListViewItem item in Receipt.Items)
+            {
+                details.Add(new DTO.BillDetail((int)item.Tag, int.Parse(item.SubItems[2].Text)));
+            }
+            return details.Count == 0 ? null : details;
+        }
         private partial class TableButton : Button
         {
             public TableButton() : base()
@@ -248,9 +253,8 @@ namespace text
         }
         public static Boolean ConvertFromTinhtrangban(string yesDaynoTrong)
         {
-            return String.Equals(yesDaynoTrong, "yes", StringComparison.OrdinalIgnoreCase) ? true
-                : String.Equals(yesDaynoTrong, "no", StringComparison.OrdinalIgnoreCase) ? false
-                : throw new ArgumentException("Invalid Tinhtrangban value");
+            return String.Equals(yesDaynoTrong, "yes", StringComparison.OrdinalIgnoreCase) || (String.Equals(yesDaynoTrong, "no", StringComparison.OrdinalIgnoreCase) ? false
+                : throw new ArgumentException("Invalid Tinhtrangban value"));
         }
         private struct DbCombobox
         {
@@ -274,6 +278,48 @@ namespace text
                 return;
             }
             RefreshUnit();
+        }
+
+        private void PrintReceipt_Click(object sender, EventArgs e)
+        {
+            var details = new List<ReceiptItem>();
+            if (Receipt.Items.Count == 0)
+            {
+                details.Add(new ReceiptItem() { id = "N/A", name = "N/A", quantity = "N/A", subtotal = "N/A", unit = "N/A" });
+            }
+            else
+            {
+                foreach(ListViewItem item in Receipt.Items)
+                {
+                    details.Add(new ReceiptItem()
+                    {
+                        id = ((int)item.Tag).ToString(),
+                        name = item.SubItems[0].Text,
+                        unit = decimal.Parse(item.SubItems[1].Text).ToString(),
+                        quantity = int.Parse(item.SubItems[2].Text).ToString(),
+                        subtotal = decimal.Parse(item.SubItems[3].Text).ToString()
+                    });
+                }
+            }
+            var rpt = new ReceiptRuntimeTextTemplate
+            {
+                Session = new Dictionary<string, object>()
+            };
+            rpt.Session["Model"] = new ReceiptModel()
+            {
+                id = "Preview N/A",
+                cashier = Program.CurrentlyLoggedIn.id + " - " + (Program.CurrentlyLoggedIn.username ?? "N/A"),
+                date = System.DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss"),
+                table = ((DbCombobox)Table.SelectedItem).ID + " - " + ((DbCombobox)Table.SelectedItem).Name,
+                discount = Discount.Value + "%",
+                total = Total.Text.ToString(),
+                totalAfterDiscount = Price.Text.ToString(),
+                items = details
+            };
+            rpt.Initialize();
+            var receiptViewer = new GUI.ReceiptPreview();
+            receiptViewer.SetWebViewer(rpt.TransformText());
+            receiptViewer.ShowDialog();
         }
     }
 }
