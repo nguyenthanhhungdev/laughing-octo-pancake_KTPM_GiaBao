@@ -96,6 +96,12 @@
     <Compile Include="GUI\Dangnhap.Designer.cs">
       <DependentUpon>Dangnhap.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\ReceiptReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ReceiptReport.Designer.cs">
+      <DependentUpon>ReceiptReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\HoaDon.cs">
       <SubType>Form</SubType>
     </Compile>
