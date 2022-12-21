@@ -8,53 +8,49 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
+using text.DAO;
+using text.GUI;
+using static System.Net.Mime.MediaTypeNames;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
-namespace text 
+namespace text
 {
     public partial class TaiKhoan : Form
     {
+        string Quyen = "";
 
-        SqlConnection conn1;
-        SqlCommand com1;
-        string Quyen          = "";
-        //string str            = @"Data Source=.\\sqlexpress;Initial Catalog = Data; Integrated Security = True";
-        string str = Program.finalConnectionString;
-        SqlDataAdapter adater = new SqlDataAdapter();
-        DataTable datatb      = new DataTable();
         public TaiKhoan(string quyen)
         {
             InitializeComponent();
             this.Quyen = quyen;
+
         }
         public void lamtrong()
         {
             cbb_UserType.Enabled = true;
 
-            btn_xoa.Enabled      = false;
-            btn_sua.Enabled      = false;
-            btnResetPW.Enabled   = false;
+            btn_xoa.Enabled = false;
+            btn_sua.Enabled = false;
+            btnResetPW.Enabled = false;
             txt_UserName.Enabled = true;
-            btn_them.Enabled     = true;
-            txt_UserName.Text    = "";
-            txt_Name.Text        = "";
-            //cbb_UserType.Text  = "";
+            btn_them.Enabled = true;
+            txt_UserName.Text = "";
+            txt_Name.Text = "";
             txt_UserName.Focus();
         }
 
         public bool chestdata()
         {
 
-
             if (string.IsNullOrEmpty(txt_UserName.Text))
 
             {
-
                 MessageBox.Show("Bạn  chưa nhập userName", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txt_UserName.Focus();
                 return false;
             }
-            
+
             if (string.IsNullOrEmpty(txt_Name.Text))
             {
                 MessageBox.Show("Bạn  chưa nhập tên tài khoản", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -68,17 +64,14 @@ namespace text
                 cbb_UserType.Focus();
                 return false;
             }
-            
+
             return true;
         }
         private void ketcsdl()
         {
-            com1                     = conn1.CreateCommand();
-            com1.CommandText         = "select  Tentk,Tenhienthi,Loai from Taikhoan";
-            adater.SelectCommand     = com1;
-            datatb.Clear();
-            adater.Fill(datatb);
-            dataGridView1.DataSource = datatb;
+            string query = "select  Id ,Tentk as N'Tên tài khoản ',Tenhienthi as N'Tên hiển thị',Loai as 'Loại' from Taikhoan";
+            DataProvider dataProvider = new DataProvider();
+            dataGridView1.DataSource = dataProvider.ExecuteQuery(query);
         }
         public TaiKhoan()
         {
@@ -90,67 +83,80 @@ namespace text
             if (Quyen == "admin")
             {
                 if (MessageBox.Show("Bạn có muốn xóa ?", "Cảnh Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
-            {
-                com1             = conn1.CreateCommand();
-                com1.CommandText = "delete from Taikhoan where Tentk = '" + txt_UserName.Text + "'";
-                com1.ExecuteNonQuery();
+                {
+                    int Id = Convert.ToInt32(txt_id.Text);
 
-                lamtrong();
-
+                    if (TaikhoanDao.Instance.Deletetk(Id))
+                    {
+                        MessageBox.Show("Xóa thành công ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        ketcsdl();
+                    }
+                    lamtrong();
+                }
             }
-        }
             else { MessageBox.Show("Xin lỗi bạn phải là admin mới mới có quyền", "Cảnh báo ", MessageBoxButtons.OK, MessageBoxIcon.Warning); }
-    ketcsdl();
         }
-        
 
         private void btnResetPW_Click(object sender, EventArgs e)
         {
-            
-            DatLaiMatKhau datlaimk   = new DatLaiMatKhau();
-            DatLaiMatKhau.tendn      = txt_UserName.Text;
-            DatLaiMatKhau.tenhienthi = txt_Name.Text;
-            datlaimk.ShowDialog();
+            if (Quyen == "admin")
+            {
+                DatLaiMatKhau datlaimk = new DatLaiMatKhau(Quyen);
+                DatLaiMatKhau.tendn = txt_UserName.Text;
+                DatLaiMatKhau.tenhienthi = txt_Name.Text;
+                datlaimk.ShowDialog();
+            }
+            else
+            {
+                DnDoimk dnDoimk = new DnDoimk();
+                DnDoimk.tendn = txt_UserName.Text;
+                DnDoimk.tenhienthi = txt_Name.Text;
 
+                dnDoimk.ShowDialog();
+            }
         }
 
         private void TaiKhoan_Load(object sender, EventArgs e)
         {
             lamtrong();
-            conn1 = new SqlConnection(str);
-            conn1.Open();       
-            ketcsdl();    
+            ketcsdl();
+            dataGridView1.Columns["id"].Visible = false;
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+
             cbb_UserType.Enabled = false;
-            btn_them.Enabled     = false;
-            btnResetPW.Enabled   = true;
-            btn_xoa.Enabled      = true;
-            btn_sua.Enabled      = true;
+            btn_them.Enabled = false;
+            btnResetPW.Enabled = true;
+            btn_xoa.Enabled = true;
+            btn_sua.Enabled = true;
 
             int i;
             DataGridViewRow row = this.dataGridView1.Rows[e.RowIndex];
-            i                   = dataGridView1.CurrentRow.Index;
+            i = dataGridView1.CurrentRow.Index;
             if (Quyen == "admin")
             {
                 cbb_UserType.Enabled = true;
-
-                txt_UserName.Text = row.Cells[0].Value.ToString();
-                txt_Name.Text = row.Cells[1].Value.ToString();
-                cbb_UserType.Text = row.Cells[2].Value.ToString();
+                if (i == 0)
+                {
+                    btn_xoa.Enabled = false;
+                }
+                txt_id.Text = row.Cells[0].Value.ToString();
+                txt_UserName.Text = row.Cells[1].Value.ToString();
+                txt_Name.Text = row.Cells[2].Value.ToString();
+                cbb_UserType.Text = row.Cells[3].Value.ToString();
             }
             else if (i == 0)
             {
                 MessageBox.Show("Xin lỗi bạn không có quyền admin", "Thống báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-
             else
             {
-                txt_UserName.Text = row.Cells[0].Value.ToString();
-                txt_Name.Text = row.Cells[1].Value.ToString();
-                cbb_UserType.Text = row.Cells[2].Value.ToString();
+                txt_id.Text = row.Cells[0].Value.ToString();
+                txt_UserName.Text = row.Cells[1].Value.ToString();
+                txt_Name.Text = row.Cells[2].Value.ToString();
+                cbb_UserType.Text = row.Cells[3].Value.ToString();
             }
         }
 
@@ -160,12 +166,14 @@ namespace text
             {
                 if (chestdata())
                 {
-                    com1 = conn1.CreateCommand();
-                    com1.CommandText = "insert into Taikhoan values('" + txt_UserName.Text + "','123456','" + txt_Name.Text + "','" + cbb_UserType.Text + "')";
-                    MessageBox.Show("Bạn thêm thành công với \nTài Khoản:'" + txt_UserName.Text + "' \nMật khâu được thiết lập mặt định : 123456", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                    com1.ExecuteNonQuery();
-
+                    string Tentk = txt_UserName.Text;
+                    string Loai = cbb_UserType.Text;
+                    string Tenht = txt_Name.Text;
+                    if (TaikhoanDao.Instance.instk(Tentk, Tenht, Loai))
+                    {
+                        MessageBox.Show("Thêm thành công ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        ketcsdl();
+                    }
                     lamtrong();
                 }
             }
@@ -180,11 +188,19 @@ namespace text
 
         private void btn_sua_Click(object sender, EventArgs e)
         {
-            com1             = conn1.CreateCommand();
-            com1.CommandText = "update Taikhoan set  Mk='123456',Tenhienthi = N'" + txt_Name.Text + "', Loai = '" + cbb_UserType.Text + "' where Tentk ='" + txt_UserName.Text + "'";
-            com1.ExecuteNonQuery();
+            string Tentk = txt_UserName.Text;
+            string Loai = cbb_UserType.Text;
+            string Tenht = txt_Name.Text;
+            int id = Convert.ToInt32(txt_id.Text);
+            if (chestdata())
+            {
+                if (TaikhoanDao.Instance.updatetk(Tentk, Tenht, Loai, id))
+                {
+                    MessageBox.Show("Sửa thành công ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    ketcsdl();
+                }
+            }
             lamtrong();
-            ketcsdl();
         }
     }
 }

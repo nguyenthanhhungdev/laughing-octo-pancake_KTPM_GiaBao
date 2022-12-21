@@ -44,9 +44,6 @@
             this.txt_tenban = new System.Windows.Forms.TextBox();
             this.txt_id = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Tenban = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Tinhtrangban = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -170,36 +167,10 @@
             resources.ApplyResources(this.dataGridView1, "dataGridView1");
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Id,
-            this.Tenban,
-            this.Tinhtrangban});
             this.dataGridView1.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // Id
-            // 
-            this.Id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Id.DataPropertyName = "Id";
-            resources.ApplyResources(this.Id, "Id");
-            this.Id.Name = "Id";
-            // 
-            // Tenban
-            // 
-            this.Tenban.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Tenban.DataPropertyName = "Tenban";
-            resources.ApplyResources(this.Tenban, "Tenban");
-            this.Tenban.Name = "Tenban";
-            // 
-            // Tinhtrangban
-            // 
-            this.Tinhtrangban.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Tinhtrangban.DataPropertyName = "Tinhtrangban";
-            resources.ApplyResources(this.Tinhtrangban, "Tinhtrangban");
-            this.Tinhtrangban.Name = "Tinhtrangban";
             // 
             // DSban
             // 
@@ -237,8 +208,5 @@
         private System.Windows.Forms.Button btn_xoa;
         private System.Windows.Forms.Button btn_them;
         private System.Windows.Forms.ComboBox txt_trangthai;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Tenban;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Tinhtrangban;
     }
 }

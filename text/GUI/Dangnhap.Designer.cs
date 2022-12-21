@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dangnhap));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.ClickThoat = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -39,7 +40,6 @@
             this.txt_tk = new System.Windows.Forms.TextBox();
             this.btn_dn = new System.Windows.Forms.Button();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ClickThoat)).BeginInit();
@@ -67,6 +67,15 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(686, 45);
             this.panel1.TabIndex = 21;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(306, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(75, 16);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Đăng nhập ";
             // 
             // ClickThoat
             // 
@@ -120,6 +129,7 @@
             this.txt_mk.Name = "txt_mk";
             this.txt_mk.Size = new System.Drawing.Size(187, 22);
             this.txt_mk.TabIndex = 16;
+            this.txt_mk.Text = "admin";
             this.txt_mk.UseSystemPasswordChar = true;
             // 
             // txt_tk
@@ -128,6 +138,7 @@
             this.txt_tk.Name = "txt_tk";
             this.txt_tk.Size = new System.Drawing.Size(187, 22);
             this.txt_tk.TabIndex = 15;
+            this.txt_tk.Text = "admin";
             // 
             // btn_dn
             // 
@@ -151,15 +162,6 @@
             this.checkBox1.Text = "Hiển thị mật khẩu ";
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(306, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(75, 16);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Đăng nhập ";
             // 
             // Dangnhap
             // 

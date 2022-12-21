@@ -8,30 +8,26 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using text.DAO;
+using text.DTO;
 
 namespace text
 {
-    
+
     public partial class DatLaiMatKhau : Form
     {
-
-
-        //SqlConnection cn = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=DOAN;Integrated Security=True");
-        //string connect = @"Data Source=.\SQLEXPRESS;Initial Catalog=DOAN;Integrated Security=True";
-        string connect = Program.finalConnectionString;
-        SqlCommand cmd;
-        SqlConnection conn1;
-
+        string Quyen = "";
 
         public DatLaiMatKhau()
         {
             InitializeComponent();
         }
 
-
-        
-        
+        public DatLaiMatKhau(string quyen)
+        {
+            InitializeComponent();
+            this.Quyen = quyen;
+        }
 
         private void btn_thoat_Click(object sender, EventArgs e)
         {
@@ -42,6 +38,7 @@ namespace text
         {
             this.Close();
         }
+
         public bool chestdata()
         {
             if (string.IsNullOrEmpty(txt_mk.Text))
@@ -64,59 +61,56 @@ namespace text
                 txt_nlmkm.Focus();
                 return false;
             }
-            SqlConnection conn = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=DOAN;Integrated Security=True");
-            conn.Open();
-            string tk = txt_tdn.Text;
-            string mk = txt_mk.Text;
-            string sql = "select * from Taikhoan where Tentk= '" + tk + "' and  Mk='" + mk + "'";
-            SqlCommand cmd1 = new SqlCommand(sql, conn);
-            SqlDataReader dr = cmd1.ExecuteReader();
-            if (dr.Read() == false)
-            {
-                MessageBox.Show("Mật khẩu không đúng", "Thông  báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return false;
-            }
-            conn.Close();
             return true;
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            
-            conn1 = new SqlConnection(connect);
-            conn1.Open();
             if (chestdata())
             {
-                if ( txt_mkm.Text == txt_nlmkm.Text)
+                string tk = txt_tdn.Text;
+                string matkhau = txt_mk.Text;
+                string sql = "select * from Taikhoan where Tentk= '" + tk + "' and  Mk='" + matkhau + "'";
+                DataTable rs = DataProvider.Instance.ExecuteQuery(sql);
+
+                if (rs.Rows.Count > 0)
                 {
-                   cmd = conn1.CreateCommand();
-                   MessageBox.Show("Đổi mật khẩu thành công !", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                   cmd.CommandText = "update Taikhoan set Mk = N'" + txt_mkm.Text + "',Tenhienthi = N'" + txt_tht.Text + "',Loai='0' where Tentk = '" + txt_tdn.Text + "'";
-                   cmd.ExecuteNonQuery();
-                   this.Close();                   
+                    if (txt_mkm.Text == txt_nlmkm.Text)
+                    {
+                        string tendn = txt_tdn.Text;
+                        string mk = txt_mkm.Text;
+                        if (TaikhoanDao.Instance.updateac(tendn, mk))
+                        {
+                            MessageBox.Show("Đổi mật khẩu thành công !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            this.Close();
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Nhập Lại Mật Khẩu Không Đúng ", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Nhập Lại Mật Khẩu Không Đúng ", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);  
-                }              
+                    MessageBox.Show("Sai tài khoản, mật khẩu hoặc để trống.", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
-            conn1.Close();       
         }
-        public static string tendn,tenhienthi;
+        public static string tendn, tenhienthi;
 
         private void cb_showpass_CheckedChanged(object sender, EventArgs e)
         {
             if (cb_showpass.Checked)
             {
-                txt_mk.UseSystemPasswordChar    = false;
-                txt_mkm.UseSystemPasswordChar   = false;
-                txt_nlmkm.UseSystemPasswordChar = false;            
+                txt_mk.UseSystemPasswordChar = false;
+                txt_mkm.UseSystemPasswordChar = false;
+                txt_nlmkm.UseSystemPasswordChar = false;
             }
             else
             {
-                txt_mk.UseSystemPasswordChar    = true;
-                txt_mkm.UseSystemPasswordChar    = true;
-                txt_nlmkm.UseSystemPasswordChar  = true;
+                txt_mk.UseSystemPasswordChar = true;
+                txt_mkm.UseSystemPasswordChar = true;
+                txt_nlmkm.UseSystemPasswordChar = true;
             }
         }
 
@@ -133,16 +127,14 @@ namespace text
         private void DatLaiMatKhau_Load(object sender, EventArgs e)
         {
             txt_mk.Focus();
-            
 
-            txt_tdn.Enabled        = false;
-            txt_tht.Enabled        = false;
-            
-            this.txt_tdn.Text      = tendn;
-            this.txt_tht.Text      = tenhienthi;
-            
+            txt_tdn.Enabled = false;
+            txt_tht.Enabled = false;
+
+            this.txt_tdn.Text = tendn;
+            this.txt_tht.Text = tenhienthi;
 
         }
-        
+
     }
 }

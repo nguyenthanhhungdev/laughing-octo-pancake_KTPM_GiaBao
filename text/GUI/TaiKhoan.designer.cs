@@ -31,6 +31,7 @@ namespace text
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TaiKhoan));
             this.panel7 = new System.Windows.Forms.Panel();
+            this.txt_id = new System.Windows.Forms.TextBox();
             this.btnReport = new System.Windows.Forms.Button();
             this.btnResetPW = new System.Windows.Forms.Button();
             this.cbb_UserType = new System.Windows.Forms.ComboBox();
@@ -39,12 +40,7 @@ namespace text
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Tentk = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dpname = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.type = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -68,6 +64,7 @@ namespace text
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.MediumAquamarine;
+            this.panel7.Controls.Add(this.txt_id);
             this.panel7.Controls.Add(this.btnReport);
             this.panel7.Controls.Add(this.btnResetPW);
             this.panel7.Controls.Add(this.cbb_UserType);
@@ -76,14 +73,20 @@ namespace text
             this.panel7.Controls.Add(this.label6);
             this.panel7.Controls.Add(this.label5);
             this.panel7.Controls.Add(this.label4);
-            this.panel7.Controls.Add(this.label2);
-            this.panel7.Controls.Add(this.label3);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel7.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel7.Location = new System.Drawing.Point(508, 166);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(532, 495);
             this.panel7.TabIndex = 5;
+            // 
+            // txt_id
+            // 
+            this.txt_id.Location = new System.Drawing.Point(206, 104);
+            this.txt_id.Name = "txt_id";
+            this.txt_id.Size = new System.Drawing.Size(100, 28);
+            this.txt_id.TabIndex = 12;
+            this.txt_id.Visible = false;
             // 
             // btnReport
             // 
@@ -116,13 +119,12 @@ namespace text
             // 
             this.cbb_UserType.FormattingEnabled = true;
             this.cbb_UserType.Items.AddRange(new object[] {
-            "Admin",
-            "Nhân viên"});
+            "admin",
+            "staff"});
             this.cbb_UserType.Location = new System.Drawing.Point(206, 293);
             this.cbb_UserType.Name = "cbb_UserType";
             this.cbb_UserType.Size = new System.Drawing.Size(106, 28);
             this.cbb_UserType.TabIndex = 9;
-            this.cbb_UserType.Text = "Nhân viên";
             // 
             // txt_Name
             // 
@@ -165,33 +167,10 @@ namespace text
             this.label4.TabIndex = 4;
             this.label4.Text = "Tên tài khoản:";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(136, 35);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(228, 19);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Loại tài khoản = 1: Quản trị viên";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(136, 87);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(208, 19);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Loại tài khoản = 0: Nhân viên";
-            // 
             // dataGridView1
             // 
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Tentk,
-            this.dpname,
-            this.type});
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
@@ -200,30 +179,6 @@ namespace text
             this.dataGridView1.Size = new System.Drawing.Size(508, 433);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
-            // 
-            // Tentk
-            // 
-            this.Tentk.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Tentk.DataPropertyName = "Tentk";
-            this.Tentk.HeaderText = "UserName";
-            this.Tentk.MinimumWidth = 6;
-            this.Tentk.Name = "Tentk";
-            // 
-            // dpname
-            // 
-            this.dpname.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dpname.DataPropertyName = "Tenhienthi";
-            this.dpname.HeaderText = "DisplayName";
-            this.dpname.MinimumWidth = 6;
-            this.dpname.Name = "dpname";
-            // 
-            // type
-            // 
-            this.type.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.type.DataPropertyName = "Loai";
-            this.type.HeaderText = "type";
-            this.type.MinimumWidth = 6;
-            this.type.Name = "type";
             // 
             // label1
             // 
@@ -400,8 +355,6 @@ namespace text
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel4;
@@ -417,8 +370,6 @@ namespace text
         private System.Windows.Forms.Button btn_them;
         private System.Windows.Forms.Button btn_xoa;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Tentk;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dpname;
-        private System.Windows.Forms.DataGridViewTextBoxColumn type;
+        private System.Windows.Forms.TextBox txt_id;
     }
 }

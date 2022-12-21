@@ -58,8 +58,10 @@
     <Compile Include="DAO\BillDAO.cs" />
     <Compile Include="DAO\CategoryDAO.cs" />
     <Compile Include="DAO\DataProvider.cs" />
+    <Compile Include="DAO\DsbanDAO.cs" />
     <Compile Include="DAO\FoodCategoryDAO.cs" />
     <Compile Include="DAO\FoodDAO.cs" />
+    <Compile Include="DAO\TaikhoanDao.cs" />
     <Compile Include="DataDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -67,7 +69,15 @@
     </Compile>
     <Compile Include="DTO\Bill.cs" />
     <Compile Include="DTO\CateGory.cs" />
+    <Compile Include="DTO\DsbanDTO.cs" />
     <Compile Include="DTO\Food.cs" />
+    <Compile Include="DTO\taikhoanDTO.cs" />
+    <Compile Include="GUI\DnDoimk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DnDoimk.Designer.cs">
+      <DependentUpon>DnDoimk.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\DoanhThu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,6 +128,9 @@
     <Compile Include="GUI\TaiKhoan.designer.cs">
       <DependentUpon>TaiKhoan.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="GUI\DnDoimk.resx">
+      <DependentUpon>DnDoimk.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\DoanhThu.resx">
       <DependentUpon>DoanhThu.cs</DependentUpon>
     </EmbeddedResource>
@@ -220,6 +233,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\add-product.png" />
+    <Content Include="Resources\fastfood1.png" />
     <Content Include="Settings.xml" />
     <None Include="Resources\spreadsheet.png" />
     <None Include="Resources\shopping-bag.png" />

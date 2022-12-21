@@ -13,10 +13,17 @@ namespace text
         public HoaDon()
         {
             InitializeComponent();
+
             Category.DisplayMember = "Name";
             Category.ValueMember = "ID";
             FoodName.DisplayMember = "Name";
             FoodName.ValueMember = "ID";
+            Switch_to.DisplayMember = "Name";
+            Switch_to.ValueMember = "ID";
+            Switch_from.DisplayMember = "Name";
+            Switch_from.ValueMember = "ID";
+            Table.DisplayMember = "Name";
+            Table.ValueMember = "ID";
 
             Discount.Value = 10;
             RefreshAll();
@@ -265,6 +272,11 @@ namespace text
                 return;
             }
             RefreshName();
+        }
+
+        private void tableLayoutPanel4_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
