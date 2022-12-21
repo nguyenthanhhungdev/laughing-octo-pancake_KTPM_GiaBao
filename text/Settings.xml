@@ -1,9 +1,14 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <settings>
 	<database>
 		<!--Data Source=localhost;Initial Catalog=DOAN;Integrated Security=True-->
-		<serverName>localhost</serverName>
-		<databaseName>DOAN</databaseName>
+		<!--<serverName>localhost</serverName>
+		<databaseName>DOAN</databaseName-->>
+		
+		<!--Data Source=localhost\sqlexpress;Initial Catalog=Data;Integrated Security=True-->
+		<serverName>localhost\sqlexpress</serverName>
+		<databaseName>Data</databaseName>
+		
 		<skipLogin>false</skipLogin>
 	</database>
 </settings> 
