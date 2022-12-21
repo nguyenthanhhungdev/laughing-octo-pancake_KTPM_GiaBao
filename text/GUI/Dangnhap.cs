@@ -17,10 +17,11 @@ namespace text
     public partial class Dangnhap : Form
     {
 
-        public Dangnhap()
+        public Dangnhap(string defaultUsername, string defaultPassword)
         {
             InitializeComponent();
-
+            txt_tk.Text = defaultUsername;
+            txt_mk.Text = defaultPassword;
         }
         private void btn_dn_Click(object sender, EventArgs e)
         {
@@ -37,7 +38,9 @@ namespace text
                 frm.Show();
                 this.Hide();
 
-                Program.currentlyLoggedInAs = (int)rs.Rows[0][0];
+                Program.CurrentlyLoggedIn.id = (int)rs.Rows[0][0];
+                Program.CurrentlyLoggedIn.username = tk;
+                Program.CurrentlyLoggedIn.password = mk;
             }
             else
             {
@@ -51,7 +54,7 @@ namespace text
         {
             if (MessageBox.Show("Bạn có muốn Thoát ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                Application.Exit();
+                Program.Exit();
             }
 
         }

@@ -124,7 +124,7 @@ namespace text
         {
             if (MessageBox.Show("Bạn có muốn Thoát ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                Application.Exit();
+                Program.Exit();
             }
         }
 
@@ -155,10 +155,11 @@ namespace text
         private void dxToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
-            Dangnhap dn = new Dangnhap();
-            dn.ShowDialog();
 
-            Program.currentlyLoggedInAs = 0;
+            Program.CurrentlyLoggedIn.id = 0;
+
+            Dangnhap dn = new Dangnhap(Program.CurrentlyLoggedIn.username, Program.CurrentlyLoggedIn.password);
+            dn.ShowDialog();
         }
 
         private void pictureBox2_MouseHover(object sender, EventArgs e)

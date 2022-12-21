@@ -9,6 +9,8 @@ namespace text
 {
     internal static class Program
     {
+        private const string SettingsUri = "..\\..\\Settings.xml";
+
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -18,25 +20,48 @@ namespace text
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            XElement settings = XElement.Load("..\\..\\Settings.xml");
+            settings = XElement.Load(SettingsUri);
             XElement database = settings.Element("database");
             dataSource = database.Element("serverName")?.Value ?? dataSource;
             initialCatalog = database.Element("databaseName")?.Value ?? initialCatalog;
             finalConnectionString = String.Format("Data Source={0};Initial Catalog={1};Integrated Security=True", dataSource, initialCatalog);
-            skipLogin = Boolean.Parse(database.Element("skipLogin")?.Value ?? "false");
+            skipLogin = Boolean.Parse(database.Element("behavior")?.Element("skipLogin")?.Value ?? "false");
             if (skipLogin)
             {
                 Application.Run(new Trangchu());
             } else
             {
-                Application.Run(new Dangnhap());
+                XElement data = settings.Element("data");
+                Application.Run(new Dangnhap(data?.Element("username")?.Value ?? "", data?.Element("password")?.Value ?? ""));
             }
         }
+        public static XElement settings;
         public static string dataSource=@"localhost\sqlexpress", initialCatalog="DOAN";
         public static string finalConnectionString;
         public static Boolean skipLogin=false;
 
-        public static int currentlyLoggedInAs = 0;
+        public static class CurrentlyLoggedIn
+        {
+            public static int id = 0;
+            public static string username, password;
+        }
+        private static void SaveLogin()
+        {
+            if (!String.IsNullOrWhiteSpace(CurrentlyLoggedIn.username))
+            {
+                settings.Element("data")?.Element("username")?.SetValue(CurrentlyLoggedIn.username);
+            }
+            if (!String.IsNullOrWhiteSpace(CurrentlyLoggedIn.password))
+            {
+                settings.Element("data")?.Element("password")?.SetValue(CurrentlyLoggedIn.password);
+            }
+        }
+        public static void Exit()
+        {
+            SaveLogin();
+            settings.Save(SettingsUri);
+            Application.Exit();
+        }
     }
 }
  

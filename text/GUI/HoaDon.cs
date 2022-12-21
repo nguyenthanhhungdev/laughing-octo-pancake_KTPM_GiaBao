@@ -126,7 +126,7 @@ namespace text
             {
                 return;
             }
-            if (BillDAO.InsertBill(new DTO.Bill(Program.currentlyLoggedInAs, 1, (int)Discount.Value, Decimal.Parse(Price.Text), (int)Table.SelectedValue), details))
+            if (BillDAO.InsertBill(new DTO.Bill(Program.CurrentlyLoggedIn.id, 1, (int)Discount.Value, Decimal.Parse(Price.Text), (int)Table.SelectedValue), details))
             {
                 MessageBox.Show("Luu hoa don vao CSDL", "Thong bao", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Receipt.Items.Clear();
