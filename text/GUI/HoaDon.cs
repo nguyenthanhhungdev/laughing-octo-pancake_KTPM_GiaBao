@@ -50,66 +50,50 @@ namespace text
             {
                 sum += Decimal.Parse(item.SubItems[3].Text);
             }
+            Total.Text = sum.ToString();
             Price.Text = (sum - sum / 100 * Discount.Value).ToString();
         }
-
-        // TODO: CHUA CO DAO DTO DSBan
-        private void RefreshSwitch()
+        private void RefreshUnit()
         {
-            //var rowList = new List<DbCombobox>();
-            //SqlDataReader data = new SqlCommand("SELECT Id, Tenban FROM DSBan", database).ExecuteReader();
-            //while (data.Read())
-            //{
-            //    rowList.Add(new DbCombobox() { ID = data.GetInt32(data.GetOrdinal("Id")), Name = data.GetString(data.GetOrdinal("Tenban")) });
-            //}
-            //Switch_to.DataSource = rowList;
-            //Switch_to.DisplayMember = "Name";
-            //Switch_to.ValueMember = "ID";
-            //Switch_from.DataSource = rowList;
-            //Switch_from.DisplayMember = "Name";
-            //Switch_from.ValueMember = "ID";
+            Unit.Text = FoodDAO.GetFood((int)FoodName.SelectedValue).Price.ToString();
+        }
+        private List<DTO.DsbanDTO> RefreshSwitch()
+        {
+            var tables = DsbanDAO.GetTables();
+            var rowList = tables.Select(table => new DbCombobox() { ID = table.Id, Name = table.Name }).ToList();
+            Switch_to.DataSource = rowList;
+            Switch_from.DataSource = new List<DbCombobox>(rowList);
+            Table.DataSource = new List<DbCombobox>(rowList);
+            return tables;
         }
         private void RefreshTables()
         {
-            //var rowList = new List<TableButton>();
-            //SqlDataReader data = new SqlCommand("SELECT Id, Tinhtrangban, Tenban FROM DSBan ORDER BY Id", database).ExecuteReader();
-            //while (data.Read())
-            //{
-            //    rowList.Add(new TableButton()
-            //    {
-            //        Tag = data.GetInt32(data.GetOrdinal("Id")),
-            //        Mode = ConvertFromTinhtrangban(data.GetString(data.GetOrdinal("Tinhtrangban"))),
-            //        Text = data.GetString(data.GetOrdinal("Tenban"))
-            //    });
-            //}
-            //Tables.Controls.Clear();
-            //Tables.Controls.AddRange(rowList.ToArray());
+            Tables.Controls.Clear();
+            Tables.Controls.AddRange(RefreshSwitch().Select(table => new TableButton()
+            {
+                Tag = table.Id,
+                Mode = ConvertFromTinhtrangban(table.Trangthai),
+                Text = table.Name
+            })
+                .ToArray());
         }
         private void RefreshAll()
         {
-            RefreshSwitch();
+            RefreshTables();
             RefreshCategory();
         }
         private void Switch_Click(object sender, EventArgs e)
         {
-            //if (Switch_from.SelectedIndex == -1)
-            //{
-            //    return;
-            //}
-            //if (Switch_to.SelectedIndex == -1)
-            //{
-            //    return;
-            //}
-            //SqlDataReader from = new SqlCommand("SELECT TOP 1 Tinhtrangban FROM DSBan WHERE Id=" + Switch_from.SelectedValue, database).ExecuteReader();
-            //SqlDataReader to = new SqlCommand("SELECT TOP 1 Tinhtrangban FROM DSBan WHERE Id=" + Switch_to.SelectedValue, database).ExecuteReader();
-            //if (from.Read() && to.Read())
-            //{
-            //    new SqlCommand("UPDATE DSBan SET Tinhtrangban=" + from.GetString(from.GetOrdinal("Tinhtrangban"))
-            //        + " WHERE Id=" + Switch_to.SelectedValue, database).ExecuteNonQuery();
-            //    new SqlCommand("UPDATE DSBan SET Tinhtrangban=" + to.GetString(to.GetOrdinal("Tinhtrangban"))
-            //        + " WHERE Id=" + Switch_from.SelectedValue, database).ExecuteNonQuery();
-            //}
-            //RefreshTables();
+            if (Switch_from.SelectedIndex == -1)
+            {
+                return;
+            }
+            if (Switch_to.SelectedIndex == -1)
+            {
+                return;
+            }
+            Swap2Table((TableButton)Tables.Controls[Switch_from.SelectedIndex], (TableButton)Tables.Controls[Switch_to.SelectedIndex]);
+            RefreshTables();
         }
         private void Add_Click(object sender, EventArgs e)
         {
@@ -198,6 +182,11 @@ namespace text
             Receipt.Items.Add(item);
             RefreshPrice();
         }
+        private void Swap2Table(TableButton first, TableButton second)
+        {
+            DsbanDAO.UpdateTable((int)first.Tag, second.Mode);
+            DsbanDAO.UpdateTable((int)second.Tag, first.Mode);
+        }
         private partial class TableButton : Button
         {
             public TableButton() : base()
@@ -220,6 +209,7 @@ namespace text
                     UpdateMode();
                 }
             }
+            private bool isNew = true;
             private void UpdateMode()
             {
                 if (mode)
@@ -241,14 +231,19 @@ namespace text
             }
             private void OnModeChange()
             {
-                new SqlCommand("UPDATE DSBan SET Tinhtrangban=" + Mode + " WHERE Id=" + Tag).ExecuteNonQuery();
+                if (isNew)
+                {
+                    isNew = false;
+                    return;
+                }
+                DsbanDAO.UpdateTable((int)Tag, Mode);
             }
         }
-        private string ConvertToTinhtrangban(Boolean trueDayfalseTrong)
+        public static string ConvertToTinhtrangban(Boolean trueDayfalseTrong)
         {
             return trueDayfalseTrong ? "yes" : "no";
         }
-        private Boolean ConvertFromTinhtrangban(string yesDaynoTrong)
+        public static Boolean ConvertFromTinhtrangban(string yesDaynoTrong)
         {
             return String.Equals(yesDaynoTrong, "yes", StringComparison.OrdinalIgnoreCase) ? true
                 : String.Equals(yesDaynoTrong, "no", StringComparison.OrdinalIgnoreCase) ? false
@@ -258,11 +253,6 @@ namespace text
         {
             public int ID { get; set; }
             public string Name { get; set; }
-        }
-        public struct DbTableButton
-        {
-            public int ID { get; set; }
-            public Boolean Mode { get; set; }
         }
 
         private void Category_SelectedIndexChanged(object sender, EventArgs e)
@@ -274,9 +264,13 @@ namespace text
             RefreshName();
         }
 
-        private void tableLayoutPanel4_Paint(object sender, PaintEventArgs e)
+        private void FoodName_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            if (FoodName.SelectedIndex < 0)
+            {
+                return;
+            }
+            RefreshUnit();
         }
     }
 }

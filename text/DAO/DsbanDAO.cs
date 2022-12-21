@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
@@ -41,6 +42,19 @@ namespace text.DAO
             int result = DataProvider.Instance.ExecuteNonQuery(query);
 
             return result > 0;
+        }
+
+        public static List<DsbanDTO> GetTables()
+        {
+            return DataProvider.Instance.ExecuteQuery("SELECT * FROM DSBan")
+                .AsEnumerable()
+                .Select(table => new DsbanDTO(table))
+                .ToList();
+        }
+        public static bool UpdateTable(int id, bool tinhtrangban)
+        {
+            return DataProvider.Instance.ExecuteNonQuery("UPDATE DSBan SET Tinhtrangban='" + HoaDon.ConvertToTinhtrangban(tinhtrangban)
+                + "' WHERE Id='" + id + "'") > 0;
         }
     }
 }

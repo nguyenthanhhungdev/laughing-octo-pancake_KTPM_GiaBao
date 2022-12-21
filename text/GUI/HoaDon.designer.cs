@@ -284,6 +284,7 @@ namespace text
             this.FoodName.Name = "FoodName";
             this.FoodName.Size = new System.Drawing.Size(180, 21);
             this.FoodName.TabIndex = 3;
+            this.FoodName.SelectedIndexChanged += new System.EventHandler(this.FoodName_SelectedIndexChanged);
             // 
             // Category
             // 
@@ -389,7 +390,6 @@ namespace text
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel4.Size = new System.Drawing.Size(386, 55);
             this.tableLayoutPanel4.TabIndex = 4;
-            this.tableLayoutPanel4.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel4_Paint);
             // 
             // Table
             // 
