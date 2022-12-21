@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data;
 using System.Data.SqlClient;
 using text.DAO;
 using text.DTO;
@@ -33,10 +32,12 @@ namespace text
             if (rs.Rows.Count > 0)
             {
                 MessageBox.Show("Đăng nhập thành công !", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                Trangchu frm = new Trangchu(tk, rs.Rows[0][0].ToString(), rs.Rows[0][1].ToString(), rs.Rows[0][2].ToString());
+                Trangchu frm = new Trangchu(tk, rs.Rows[0][1].ToString(), rs.Rows[0][2].ToString(), rs.Rows[0][4].ToString());
 
                 frm.Show();
                 this.Hide();
+
+                Program.currentlyLoggedInAs = (int)rs.Rows[0][0];
             }
             else
             {
