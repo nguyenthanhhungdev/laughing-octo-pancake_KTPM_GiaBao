@@ -51,9 +51,10 @@
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 45);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 37);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(686, 251);
+            this.pictureBox1.Size = new System.Drawing.Size(514, 204);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 22;
             this.pictureBox1.TabStop = false;
@@ -64,16 +65,18 @@
             this.panel1.Controls.Add(this.ClickThoat);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(686, 45);
+            this.panel1.Size = new System.Drawing.Size(514, 37);
             this.panel1.TabIndex = 21;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(306, 9);
+            this.label2.Location = new System.Drawing.Point(230, 7);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(75, 16);
+            this.label2.Size = new System.Drawing.Size(63, 13);
             this.label2.TabIndex = 1;
             this.label2.Text = "Đăng nhập ";
             // 
@@ -82,9 +85,10 @@
             this.ClickThoat.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ClickThoat.BackgroundImage")));
             this.ClickThoat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClickThoat.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ClickThoat.Location = new System.Drawing.Point(624, 0);
+            this.ClickThoat.Location = new System.Drawing.Point(468, 0);
+            this.ClickThoat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ClickThoat.Name = "ClickThoat";
-            this.ClickThoat.Size = new System.Drawing.Size(62, 45);
+            this.ClickThoat.Size = new System.Drawing.Size(46, 37);
             this.ClickThoat.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ClickThoat.TabIndex = 0;
             this.ClickThoat.TabStop = false;
@@ -97,18 +101,21 @@
             this.label1.AutoSize = true;
             this.label1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label1.ForeColor = System.Drawing.Color.MediumAquamarine;
-            this.label1.Location = new System.Drawing.Point(204, 500);
+            this.label1.Location = new System.Drawing.Point(153, 406);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(107, 16);
+            this.label1.Size = new System.Drawing.Size(91, 13);
             this.label1.TabIndex = 19;
             this.label1.Text = "Quên Mật Khẩu ?";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(216, 346);
+            this.pictureBox2.Location = new System.Drawing.Point(162, 281);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(34, 30);
+            this.pictureBox2.Size = new System.Drawing.Size(26, 24);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 18;
             this.pictureBox2.TabStop = false;
@@ -116,36 +123,40 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(216, 308);
+            this.pictureBox3.Location = new System.Drawing.Point(162, 250);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(34, 22);
+            this.pictureBox3.Size = new System.Drawing.Size(26, 18);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 17;
             this.pictureBox3.TabStop = false;
             // 
             // txt_mk
             // 
-            this.txt_mk.Location = new System.Drawing.Point(290, 354);
+            this.txt_mk.Location = new System.Drawing.Point(218, 288);
+            this.txt_mk.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txt_mk.Name = "txt_mk";
-            this.txt_mk.Size = new System.Drawing.Size(187, 22);
+            this.txt_mk.Size = new System.Drawing.Size(141, 20);
             this.txt_mk.TabIndex = 16;
             this.txt_mk.Text = "admin";
             this.txt_mk.UseSystemPasswordChar = true;
             // 
             // txt_tk
             // 
-            this.txt_tk.Location = new System.Drawing.Point(290, 308);
+            this.txt_tk.Location = new System.Drawing.Point(218, 250);
+            this.txt_tk.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txt_tk.Name = "txt_tk";
-            this.txt_tk.Size = new System.Drawing.Size(187, 22);
+            this.txt_tk.Size = new System.Drawing.Size(141, 20);
             this.txt_tk.TabIndex = 15;
             this.txt_tk.Text = "admin";
             // 
             // btn_dn
             // 
             this.btn_dn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_dn.Location = new System.Drawing.Point(207, 453);
+            this.btn_dn.Location = new System.Drawing.Point(155, 368);
+            this.btn_dn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_dn.Name = "btn_dn";
-            this.btn_dn.Size = new System.Drawing.Size(270, 27);
+            this.btn_dn.Size = new System.Drawing.Size(202, 22);
             this.btn_dn.TabIndex = 14;
             this.btn_dn.Text = "Đăng Nhập";
             this.btn_dn.UseVisualStyleBackColor = true;
@@ -155,9 +166,10 @@
             // 
             this.checkBox1.AutoSize = true;
             this.checkBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.checkBox1.Location = new System.Drawing.Point(290, 409);
+            this.checkBox1.Location = new System.Drawing.Point(218, 332);
+            this.checkBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(133, 20);
+            this.checkBox1.Size = new System.Drawing.Size(112, 17);
             this.checkBox1.TabIndex = 23;
             this.checkBox1.Text = "Hiển thị mật khẩu ";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -165,9 +177,9 @@
             // 
             // Dangnhap
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(686, 550);
+            this.ClientSize = new System.Drawing.Size(514, 447);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel1);
@@ -178,6 +190,7 @@
             this.Controls.Add(this.txt_tk);
             this.Controls.Add(this.btn_dn);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Dangnhap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
