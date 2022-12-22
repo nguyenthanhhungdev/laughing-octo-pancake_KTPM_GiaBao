@@ -116,7 +116,7 @@ namespace text
             this.label3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label3.Location = new System.Drawing.Point(68, 161);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(76, 17);
+            this.label3.Size = new System.Drawing.Size(70, 16);
             this.label3.TabIndex = 5;
             this.label3.Text = "Danh mục:";
             // 
@@ -127,7 +127,7 @@ namespace text
             this.label2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label2.Location = new System.Drawing.Point(68, 100);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(68, 17);
+            this.label2.Size = new System.Drawing.Size(63, 16);
             this.label2.TabIndex = 4;
             this.label2.Text = "Tên món:";
             // 
@@ -215,7 +215,7 @@ namespace text
             this.ID.AutoSize = true;
             this.ID.Location = new System.Drawing.Point(76, 36);
             this.ID.Name = "ID";
-            this.ID.Size = new System.Drawing.Size(21, 17);
+            this.ID.Size = new System.Drawing.Size(20, 16);
             this.ID.TabIndex = 10;
             this.ID.Text = "ID";
             // 
@@ -239,7 +239,7 @@ namespace text
             this.label4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label4.Location = new System.Drawing.Point(76, 220);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(34, 17);
+            this.label4.Size = new System.Drawing.Size(31, 16);
             this.label4.TabIndex = 8;
             this.label4.Text = "Giá:";
             // 
@@ -291,6 +291,7 @@ namespace text
             this.Controls.Add(this.panel1);
             this.Name = "ThucDon";
             this.Text = "ThucDon";
+            this.Load += new System.EventHandler(this.ThucDon_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMenu)).EndInit();
             this.panel2.ResumeLayout(false);

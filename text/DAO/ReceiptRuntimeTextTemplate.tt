@@ -4,24 +4,33 @@
 <#@ import namespace="System.Text" #>
 <#@ import namespace="System.Collections.Generic" #>
 <#@ parameter name="Model" type="text.DAO.ReceiptModel" #>
+<!DOCTYPE html>
 <html>
 <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title></title>
     <style type="text/css">
-        body { font-family: Calibri;width:400px;}
-        table { text-align:center; }
-        .container {width:400px; height:100%;}
+        body { font-family: Calibri; font-size: 16px;}
+        h1 {text-align: center; margin: 10px; text-transform: uppercase;}
+        h6 {margin: 5px;}
+        p {margin: 3px;}
+        table { text-align: center; display:inline-block; margin: auto;}
+        thead { text-transform: uppercase;}
+        tbody {font-size: 12px;}
+        .container {height:100%;}
+        .foot {text-align:right;}
     </style>
 </head>
 <body>
     <div class="container">
         <img src="<#= System.Windows.Forms.Application.StartupPath #>\..\..\..\img\cropped-SGU-LOGO.jpg" alt="logo" width="200" height="50"/>
         <h6><#= System.Windows.Forms.Application.StartupPath #></h6>
-        <h1 style="text-align:center;">Order Demo</h1>
-        <p>Receipt ID: <#= Model.id #></p>
-        <p>Creation date: <#= Model.date #></p>
-        <p>Cashier: <#= Model.cashier #></p>
-        <p>At table: <#= Model.table #></p>
+        <h1>Order Demo</h1>
+        <p><strong>Receipt ID:</strong> <#= Model.id #></p>
+        <p><strong>Creation date:</strong> <#= Model.date #></p>
+        <p><strong>Cashier:</strong> <#= Model.cashier #></p>
+        <p><strong>At table:</strong> <#= Model.table #></p>
+        <hr>
         <table>
             <thead>
               <tr>
@@ -44,10 +53,11 @@
               <# } #>
             </tbody>
         </table>
-        <p>Total: <#= Model.total #></p>
-        <p>Discount %: <#= Model.discount #></p>
-        <p>Pay amount: <#= Model.totalAfterDiscount #></p>
-        <h6 style="text-align:center;">This report is a Receipt print demo for DOANc#</h6>
+        <hr>
+        <p class="foot"><strong>Total:</strong> <#= Model.total #></p>
+        <p class="foot"><strong>Discount %:</strong> <#= Model.discount #></p>
+        <p class="foot"><strong>Pay amount:</strong> <#= Model.totalAfterDiscount #></p>
+        <h6 style="text-align:center;">This report is a Receipt print demo for DOANc#, SGU</h6>
         <h6>The report is Company Confidential.</h6>
     </div>
 </body>

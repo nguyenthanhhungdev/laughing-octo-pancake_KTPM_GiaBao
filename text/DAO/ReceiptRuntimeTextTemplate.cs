@@ -28,20 +28,28 @@ namespace text.DAO
         /// </summary>
         public virtual string TransformText()
         {
-            this.Write(@"<html>
+            this.Write(@"<!DOCTYPE html>
+<html>
 <head>
+    <meta http-equiv=""X-UA-Compatible"" content=""IE=edge"">
 	<title></title>
     <style type=""text/css"">
-        body { font-family: Calibri;width:400px;}
-        table { text-align:center; }
-        .container {width:400px; height:100%;}
+        body { font-family: Calibri; font-size: 16px;}
+        h1 {text-align: center; margin: 10px; text-transform: uppercase;}
+        h6 {margin: 5px;}
+        p {margin: 3px;}
+        table { text-align: center; display:inline-block; margin: auto;}
+        thead { text-transform: uppercase;}
+        tbody {font-size: 12px;}
+        .container {height:100%;}
+        .foot {text-align:right;}
     </style>
 </head>
 <body>
     <div class=""container"">
         <img src=""");
             
-            #line 18 "C:\Users\ACER\Desktop\doancs\text (1)\text\DAO\ReceiptRuntimeTextTemplate.tt"
+            #line 26 "C:\Users\ACER\Desktop\doancs\text (1)\text\DAO\ReceiptRuntimeTextTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(System.Windows.Forms.Application.StartupPath));
             
             #line default
@@ -49,41 +57,41 @@ namespace text.DAO
             this.Write("\\..\\..\\..\\img\\cropped-SGU-LOGO.jpg\" alt=\"logo\" width=\"200\" height=\"50\"/>\r\n       " +
                     " <h6>");
             
-            #line 19 "C:\Users\ACER\Desktop\doancs\text (1)\text\DAO\ReceiptRuntimeTextTemplate.tt"
+            #line 27 "C:\Users\ACER\Desktop\doancs\text (1)\text\DAO\ReceiptRuntimeTextTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(System.Windows.Forms.Application.StartupPath));
             
             #line default
             #line hidden
-            this.Write("</h6>\r\n        <h1 style=\"text-align:center;\">Order Demo</h1>\r\n        <p>Receipt" +
-                    " ID: ");
+            this.Write("</h6>\r\n        <h1>Order Demo</h1>\r\n        <p><strong>Receipt ID:</strong> ");
             
-            #line 21 "C:\Users\ACER\Desktop\doancs\text (1)\text\DAO\ReceiptRuntimeTextTemplate.tt"
+            #line 29 "C:\Users\ACER\Desktop\doancs\text (1)\text\DAO\ReceiptRuntimeTextTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Model.id));
             
             #line default
             #line hidden
-            this.Write("</p>\r\n        <p>Creation date: ");
+            this.Write("</p>\r\n        <p><strong>Creation date:</strong> ");
             
-            #line 22 "C:\Users\ACER\Desktop\doancs\text (1)\text\DAO\ReceiptRuntimeTextTemplate.tt"
+            #line 30 "C:\Users\ACER\Desktop\doancs\text (1)\text\DAO\ReceiptRuntimeTextTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Model.date));
             
             #line default
             #line hidden
-            this.Write("</p>\r\n        <p>Cashier: ");
+            this.Write("</p>\r\n        <p><strong>Cashier:</strong> ");
             
-            #line 23 "C:\Users\ACER\Desktop\doancs\text (1)\text\DAO\ReceiptRuntimeTextTemplate.tt"
+            #line 31 "C:\Users\ACER\Desktop\doancs\text (1)\text\DAO\ReceiptRuntimeTextTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Model.cashier));
             
             #line default
             #line hidden
-            this.Write("</p>\r\n        <p>At table: ");
+            this.Write("</p>\r\n        <p><strong>At table:</strong> ");
             
-            #line 24 "C:\Users\ACER\Desktop\doancs\text (1)\text\DAO\ReceiptRuntimeTextTemplate.tt"
+            #line 32 "C:\Users\ACER\Desktop\doancs\text (1)\text\DAO\ReceiptRuntimeTextTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Model.table));
             
             #line default
             #line hidden
             this.Write(@"</p>
+        <hr>
         <table>
             <thead>
               <tr>
@@ -97,77 +105,78 @@ namespace text.DAO
             <tbody>
               ");
             
-            #line 36 "C:\Users\ACER\Desktop\doancs\text (1)\text\DAO\ReceiptRuntimeTextTemplate.tt"
+            #line 45 "C:\Users\ACER\Desktop\doancs\text (1)\text\DAO\ReceiptRuntimeTextTemplate.tt"
  foreach(var row in Model.items) { 
             
             #line default
             #line hidden
             this.Write("                <tr>\r\n                    <td>");
             
-            #line 38 "C:\Users\ACER\Desktop\doancs\text (1)\text\DAO\ReceiptRuntimeTextTemplate.tt"
+            #line 47 "C:\Users\ACER\Desktop\doancs\text (1)\text\DAO\ReceiptRuntimeTextTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(row.id));
             
             #line default
             #line hidden
             this.Write("</td>\r\n                    <td>");
             
-            #line 39 "C:\Users\ACER\Desktop\doancs\text (1)\text\DAO\ReceiptRuntimeTextTemplate.tt"
+            #line 48 "C:\Users\ACER\Desktop\doancs\text (1)\text\DAO\ReceiptRuntimeTextTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(row.name));
             
             #line default
             #line hidden
             this.Write("</td>\r\n                    <td>");
             
-            #line 40 "C:\Users\ACER\Desktop\doancs\text (1)\text\DAO\ReceiptRuntimeTextTemplate.tt"
+            #line 49 "C:\Users\ACER\Desktop\doancs\text (1)\text\DAO\ReceiptRuntimeTextTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(row.unit));
             
             #line default
             #line hidden
             this.Write("</td>\r\n                    <td>");
             
-            #line 41 "C:\Users\ACER\Desktop\doancs\text (1)\text\DAO\ReceiptRuntimeTextTemplate.tt"
+            #line 50 "C:\Users\ACER\Desktop\doancs\text (1)\text\DAO\ReceiptRuntimeTextTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(row.quantity));
             
             #line default
             #line hidden
             this.Write("</td>\r\n                    <td>");
             
-            #line 42 "C:\Users\ACER\Desktop\doancs\text (1)\text\DAO\ReceiptRuntimeTextTemplate.tt"
+            #line 51 "C:\Users\ACER\Desktop\doancs\text (1)\text\DAO\ReceiptRuntimeTextTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(row.subtotal));
             
             #line default
             #line hidden
             this.Write("</td>\r\n                </tr>\r\n              ");
             
-            #line 44 "C:\Users\ACER\Desktop\doancs\text (1)\text\DAO\ReceiptRuntimeTextTemplate.tt"
+            #line 53 "C:\Users\ACER\Desktop\doancs\text (1)\text\DAO\ReceiptRuntimeTextTemplate.tt"
  } 
             
             #line default
             #line hidden
-            this.Write("            </tbody>\r\n        </table>\r\n        <p>Total: ");
+            this.Write("            </tbody>\r\n        </table>\r\n        <hr>\r\n        <p class=\"foot\"><st" +
+                    "rong>Total:</strong> ");
             
-            #line 47 "C:\Users\ACER\Desktop\doancs\text (1)\text\DAO\ReceiptRuntimeTextTemplate.tt"
+            #line 57 "C:\Users\ACER\Desktop\doancs\text (1)\text\DAO\ReceiptRuntimeTextTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Model.total));
             
             #line default
             #line hidden
-            this.Write("</p>\r\n        <p>Discount %: ");
+            this.Write("</p>\r\n        <p class=\"foot\"><strong>Discount %:</strong> ");
             
-            #line 48 "C:\Users\ACER\Desktop\doancs\text (1)\text\DAO\ReceiptRuntimeTextTemplate.tt"
+            #line 58 "C:\Users\ACER\Desktop\doancs\text (1)\text\DAO\ReceiptRuntimeTextTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Model.discount));
             
             #line default
             #line hidden
-            this.Write("</p>\r\n        <p>Pay amount: ");
+            this.Write("</p>\r\n        <p class=\"foot\"><strong>Pay amount:</strong> ");
             
-            #line 49 "C:\Users\ACER\Desktop\doancs\text (1)\text\DAO\ReceiptRuntimeTextTemplate.tt"
+            #line 59 "C:\Users\ACER\Desktop\doancs\text (1)\text\DAO\ReceiptRuntimeTextTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Model.totalAfterDiscount));
             
             #line default
             #line hidden
             this.Write("</p>\r\n        <h6 style=\"text-align:center;\">This report is a Receipt print demo " +
-                    "for DOANc#</h6>\r\n        <h6>The report is Company Confidential.</h6>\r\n    </div" +
-                    ">\r\n</body>\r\n</html>");
+                    "for DOANc#, SGU</h6>\r\n        <h6>The report is Company Confidential.</h6>\r\n    " +
+                    "</div>\r\n</body>\r\n</html>");
             return this.GenerationEnvironment.ToString();
         }
         

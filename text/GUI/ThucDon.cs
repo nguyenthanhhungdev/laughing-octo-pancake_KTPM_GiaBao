@@ -199,6 +199,16 @@ namespace text
         private void btnRefresh_Click(object sender, EventArgs e)
         {
             loadFoodList();
+            
+            
+        }
+
+        private void ThucDon_Load(object sender, EventArgs e)
+        {
+            
+            // TODO: This line of code loads data into the 'dataDataSet.FoodCateGory' table. You can move, or remove it, as needed.
+            //this.foodCateGoryTableAdapter.Fill(this.dataDataSet.FoodCateGory);
+
         }
     }
 }

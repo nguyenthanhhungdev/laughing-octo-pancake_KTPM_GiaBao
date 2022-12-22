@@ -78,6 +78,12 @@
     <Compile Include="DTO\DsbanDTO.cs" />
     <Compile Include="DTO\Food.cs" />
     <Compile Include="DTO\taikhoanDTO.cs" />
+    <Compile Include="GUI\Quenmk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Quenmk.Designer.cs">
+      <DependentUpon>Quenmk.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\ReceiptPreview.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -140,6 +146,9 @@
     <Compile Include="GUI\TaiKhoan.designer.cs">
       <DependentUpon>TaiKhoan.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="GUI\Quenmk.resx">
+      <DependentUpon>Quenmk.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\ReceiptPreview.resx">
       <DependentUpon>ReceiptPreview.cs</DependentUpon>
     </EmbeddedResource>
@@ -184,6 +193,7 @@
     <EmbeddedResource Include="GUI\TaiKhoan.resx">
       <DependentUpon>TaiKhoan.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="app.config" />
     <None Include="DataDataSet.xsc">
       <DependentUpon>DataDataSet.xsd</DependentUpon>
     </None>

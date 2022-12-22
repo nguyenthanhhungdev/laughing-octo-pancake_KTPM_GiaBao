@@ -163,3 +163,4 @@ C:\Users\ACER\Desktop\doancs\text (1)\text\obj\Debug\text.exe
 C:\Users\ACER\Desktop\doancs\text (1)\text\obj\Debug\text.pdb
 C:\Users\ACER\Desktop\doancs\text (1)\text\obj\Debug\text.GUI.DnDoimk.resources
 C:\Users\ACER\Desktop\doancs\text (1)\text\obj\Debug\text.GUI.ReceiptPreview.resources
+C:\Users\ACER\Desktop\doancs\text (1)\text\obj\Debug\text.GUI.Quenmk.resources

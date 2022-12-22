@@ -316,9 +316,7 @@ namespace text
                 totalAfterDiscount = Price.Text.ToString(),
                 items = details
             };
-            rpt.Initialize();
-            var receiptViewer = new GUI.ReceiptPreview();
-            receiptViewer.SetWebViewer(rpt.TransformText());
+            var receiptViewer = new GUI.ReceiptPreview(rpt);
             receiptViewer.ShowDialog();
         }
     }

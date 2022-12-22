@@ -237,7 +237,7 @@
             this.menu});
             this.menuStrip1.Location = new System.Drawing.Point(4, 9);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(24, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(22, 24);
             this.menuStrip1.TabIndex = 15;
             this.menuStrip1.Text = "Dang xuat";
             // 
@@ -246,7 +246,7 @@
             this.menu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.dxToolStripMenuItem});
             this.menu.Name = "menu";
-            this.menu.Size = new System.Drawing.Size(14, 26);
+            this.menu.Size = new System.Drawing.Size(14, 20);
             // 
             // dxToolStripMenuItem
             // 

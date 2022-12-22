@@ -6,17 +6,20 @@ using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using text.DAO;
 
 namespace text.GUI
 {
     partial class ReceiptPreview : Form
     {
-        public ReceiptPreview()
+        public ReceiptPreview(ReceiptRuntimeTextTemplate rpt)
         {
             InitializeComponent();
             this.Text = String.Format("About {0}", AssemblyTitle);
+            rpt.Initialize();
+            SetWebViewer(rpt.TransformText());
         }
-        public void SetWebViewer(string documentText)
+        private void SetWebViewer(string documentText)
         {
             WebViewer.DocumentText = documentText;
         }
@@ -99,5 +102,30 @@ namespace text.GUI
             }
         }
         #endregion
+
+        private void printSetupButton_Click(object sender, EventArgs e)
+        {
+            WebViewer.ShowPageSetupDialog();
+        }
+
+        private void printPreviewButton_Click(object sender, EventArgs e)
+        {
+            WebViewer.ShowPrintPreviewDialog();
+        }
+
+        private void printButton_Click(object sender, EventArgs e)
+        {
+            WebViewer.ShowPrintDialog();
+        }
+
+        private void saveasButton_Click(object sender, EventArgs e)
+        {
+            WebViewer.ShowSaveAsDialog();
+        }
+
+        private void logoPictureBox_Click(object sender, EventArgs e)
+        {
+            WebViewer.ShowPropertiesDialog();
+        }
     }
 }
