@@ -153,8 +153,8 @@ namespace text.DAO
             #line default
             #line hidden
             this.Write("            </tbody>\r\n        </table>\r\n        <hr>\r\n        <table style=\"margi" +
-                    "n-left: auto;\">\r\n            <tr>\r\n                <th>Total:</th>\r\n            " +
-                    "    <td style=\"text-align:right;\">");
+                    "n-left: auto;\">\r\n            <tr>\r\n                <th style=\"text-align:left;\">" +
+                    "Total:</th>\r\n                <td style=\"text-align:right;\">");
             
             #line 60 "C:\Users\ACER\Desktop\doancs\text (1)\text\DAO\ReceiptRuntimeTextTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Model.total));
@@ -162,8 +162,8 @@ namespace text.DAO
             #line default
             #line hidden
             this.Write("</td>\r\n                <td style=\"text-align:left;\"><strong>VND</strong></td>\r\n  " +
-                    "          </tr>\r\n            <tr>\r\n                <th>Discount %:</th>\r\n       " +
-                    "         <td style=\"text-align:right;\">");
+                    "          </tr>\r\n            <tr>\r\n                <th style=\"text-align:left;\">" +
+                    "Discount %:</th>\r\n                <td style=\"text-align:right;\">");
             
             #line 65 "C:\Users\ACER\Desktop\doancs\text (1)\text\DAO\ReceiptRuntimeTextTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Model.discount));
@@ -171,8 +171,8 @@ namespace text.DAO
             #line default
             #line hidden
             this.Write("</td>\r\n                <td style=\"text-align:left;\"><strong>%</strong></td>\r\n    " +
-                    "        </tr>\r\n            <tr>\r\n                <th>Pay amount:</th>\r\n         " +
-                    "       <td style=\"text-align:right;\">");
+                    "        </tr>\r\n            <tr>\r\n                <th style=\"text-align:left;\">Pa" +
+                    "y amount:</th>\r\n                <td style=\"text-align:right;\">");
             
             #line 70 "C:\Users\ACER\Desktop\doancs\text (1)\text\DAO\ReceiptRuntimeTextTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Model.totalAfterDiscount));

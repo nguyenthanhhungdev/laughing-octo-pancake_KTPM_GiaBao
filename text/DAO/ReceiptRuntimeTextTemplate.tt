@@ -56,17 +56,17 @@
         <hr>
         <table style="margin-left: auto;">
             <tr>
-                <th>Total:</th>
+                <th style="text-align:left;">Total:</th>
                 <td style="text-align:right;"><#= Model.total #></td>
                 <td style="text-align:left;"><strong>VND</strong></td>
             </tr>
             <tr>
-                <th>Discount %:</th>
+                <th style="text-align:left;">Discount %:</th>
                 <td style="text-align:right;"><#= Model.discount #></td>
                 <td style="text-align:left;"><strong>%</strong></td>
             </tr>
             <tr>
-                <th>Pay amount:</th>
+                <th style="text-align:left;">Pay amount:</th>
                 <td style="text-align:right;"><#= Model.totalAfterDiscount #></td>
                 <td style="text-align:left;"><strong>VND</strong></td>
             </tr>

@@ -154,12 +154,18 @@ namespace text
             csv.AppendLine("Ten mon,Don gia,So luong,Thanh tien");
             foreach (ListViewItem item in Receipt.Items)
             {
-                csv.AppendLine(String.Join(",", item.SubItems));
+                csv.AppendLine(String.Join(",", item.SubItems.OfType<ListViewItem.ListViewSubItem>().Select(col => col.Text).ToArray()));
             }
-            csv.AppendLine(",,," + Price.Text);
+            DateTime creation = System.DateTime.Now;
+            csv.AppendLine(",,Tong," + Total.Text);
+            csv.AppendLine(",,Giam %," + Discount.Text);
+            csv.AppendLine(",,Tra," + Price.Text);
+            csv.AppendLine("Nhan vien," + Program.CurrentlyLoggedIn.username);
+            csv.AppendLine("Ban," + ((DbCombobox)Table.Items[Table.SelectedIndex]).Name);
+            csv.AppendLine("Thoi gian," + creation.ToString("dd/MM/yyyy hh:mm:ss.fff"));
             try
             {
-                System.IO.File.WriteAllText(path, csv.ToString());
+                System.IO.File.WriteAllText(path + "\\" + creation.ToString("yyyyMMddhhmmssfff") + ".csv", csv.ToString());
                 MessageBox.Show("Luu file thanh cong", "Thong bao", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception)
