@@ -309,7 +309,7 @@ namespace text
             {
                 id = "Preview N/A",
                 cashier = Program.CurrentlyLoggedIn.id + " - " + (Program.CurrentlyLoggedIn.username ?? "N/A"),
-                date = System.DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss"),
+                date = System.DateTime.Now.ToString("dddd, dd/MM/yyyy, HH:mm:ss.fff"),
                 table = ((DbCombobox)Table.SelectedItem).ID + " - " + ((DbCombobox)Table.SelectedItem).Name,
                 discount = Discount.Value.ToString(),
                 total = Total.Text.ToString(),
