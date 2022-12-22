@@ -97,10 +97,10 @@ namespace text
 
         private void cbbCateGory_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int id = 0;
-            ComboBox cb = sender as ComboBox;
-            Category item = cb.SelectedItem as Category;
-            loadFoodListByCateGoryID(id);
+            //int id = 0;
+            //ComboBox cb = sender as ComboBox;
+            //Category item = cb.SelectedItem as Category;
+            //loadFoodListByCateGoryID(id);
         }
 
         //Insert Food
@@ -108,7 +108,7 @@ namespace text
         {
             string name = txtName.Text;
             int categoryID = (cbbCateGory.SelectedItem as Category).ID;
-            float price = (float)nudPrice.Value;
+            decimal price = (decimal)nudPrice.Value;
             
             if (checkInput() && FoodDAO.Instance.InsertFood(name, categoryID, price))
             {
@@ -126,7 +126,7 @@ namespace text
         {
             String name = txtName.Text;
             int categoryID = (cbbCateGory.SelectedItem as Category).ID;
-            float price = (float)nudPrice.Value;
+            decimal price = (decimal)nudPrice.Value;
             int id = Convert.ToInt32(txtId.Text);
 
             if (FoodDAO.Instance.UpdateFood(id, name, categoryID, price))
