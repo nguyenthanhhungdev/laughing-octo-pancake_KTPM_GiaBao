@@ -32,7 +32,6 @@ namespace text
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TaiKhoan));
             this.panel7 = new System.Windows.Forms.Panel();
             this.txt_id = new System.Windows.Forms.TextBox();
-            this.btnReport = new System.Windows.Forms.Button();
             this.btnResetPW = new System.Windows.Forms.Button();
             this.cbb_UserType = new System.Windows.Forms.ComboBox();
             this.txt_Name = new System.Windows.Forms.TextBox();
@@ -65,7 +64,6 @@ namespace text
             // 
             this.panel7.BackColor = System.Drawing.Color.MediumAquamarine;
             this.panel7.Controls.Add(this.txt_id);
-            this.panel7.Controls.Add(this.btnReport);
             this.panel7.Controls.Add(this.btnResetPW);
             this.panel7.Controls.Add(this.cbb_UserType);
             this.panel7.Controls.Add(this.txt_Name);
@@ -87,22 +85,6 @@ namespace text
             this.txt_id.Size = new System.Drawing.Size(100, 28);
             this.txt_id.TabIndex = 12;
             this.txt_id.Visible = false;
-            // 
-            // btnReport
-            // 
-            this.btnReport.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnReport.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnReport.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReport.Image = ((System.Drawing.Image)(resources.GetObject("btnReport.Image")));
-            this.btnReport.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReport.Location = new System.Drawing.Point(312, 381);
-            this.btnReport.Name = "btnReport";
-            this.btnReport.Size = new System.Drawing.Size(115, 39);
-            this.btnReport.TabIndex = 11;
-            this.btnReport.Text = "Report";
-            this.btnReport.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnReport.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnReport.UseVisualStyleBackColor = true;
             // 
             // btnResetPW
             // 
@@ -360,7 +342,6 @@ namespace text
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btnResetPW;
-        private System.Windows.Forms.Button btnReport;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Panel panel10;

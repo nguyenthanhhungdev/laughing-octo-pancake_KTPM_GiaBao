@@ -65,15 +65,15 @@ GO
 --Danh sách bàn
 insert into Taikhoan(Tentk,Mk,Tenhienthi,Loai) values ('admin','admin','admin', 'admin')
 
-insert into DSban(Id,Tinhtrangban,Tenban) values (1,'khong co','ban1')
-insert into DSban(Id,Tinhtrangban,Tenban) values (2,'khong co','ban2')
-insert into DSban(Id,Tinhtrangban,Tenban) values (3,'khong co','ban3')
-insert into DSban(Id,Tinhtrangban,Tenban) values (4,'khong co','ban4')
-insert into DSban(Id,Tinhtrangban,Tenban) values (5,'khong co','ban5')
-insert into DSban(Id,Tinhtrangban,Tenban) values (6,'khong co','ban6')
-insert into DSban(Id,Tinhtrangban,Tenban) values (7,'khong co','ban7')
-insert into DSban(Id,Tinhtrangban,Tenban) values (8,' co','ban8')
-insert into DSban(Id,Tinhtrangban,Tenban) values (9,'khong co','ban9')
+insert into DSban(Id,Tinhtrangban,Tenban) values (1,'no','ban1')
+insert into DSban(Id,Tinhtrangban,Tenban) values (2,'no','ban2')
+insert into DSban(Id,Tinhtrangban,Tenban) values (3,'no','ban3')
+insert into DSban(Id,Tinhtrangban,Tenban) values (4,'no','ban4')
+insert into DSban(Id,Tinhtrangban,Tenban) values (5,'no','ban5')
+insert into DSban(Id,Tinhtrangban,Tenban) values (6,'no','ban6')
+insert into DSban(Id,Tinhtrangban,Tenban) values (7,'no','ban7')
+insert into DSban(Id,Tinhtrangban,Tenban) values (8,' no','ban8')
+insert into DSban(Id,Tinhtrangban,Tenban) values (9,'no','ban9')
 
 select * from DSban 
 
@@ -110,15 +110,15 @@ INSERT INTO Food(name, idCateGory, price) VALUES (N'Bánh Gạo Lắc Phô Mai',
 SELECT id as 'id', name AS 'Tên món', idCateGory AS 'Loại', price AS 'Đơn giá' FROM Food
 
 --INSERT ACCCOUNT
-INSERT INTO Taikhoan(Tentk, Mk, Tenhienthi, Loai) VALUES ('van_thanh_cong', 'cong', 'Van Thanh Cong', '')
-INSERT INTO Taikhoan(Tentk, Mk, Tenhienthi, Loai) VALUES ('ly_hong_duc', 'duc', 'Ly Hong Duc', '')
-INSERT INTO Taikhoan(Tentk, Mk, Tenhienthi, Loai) VALUES ('thao_ngoc_dung', 'dung', 'Thao Ngoc Dung', '')
-INSERT INTO Taikhoan(Tentk, Mk, Tenhienthi, Loai) VALUES ('dong_khac_duy', 'duy', 'Dong Khac Duy', '')
-INSERT INTO Taikhoan(Tentk, Mk, Tenhienthi, Loai) VALUES ('nham_anh_khoa', 'khoa', 'Nham Anh Khoa', '')
-INSERT INTO Taikhoan(Tentk, Mk, Tenhienthi, Loai) VALUES ('duy_quoc_hai', 'hai', 'Duy Quoc Hai', '')
-INSERT INTO Taikhoan(Tentk, Mk, Tenhienthi, Loai) VALUES ('cam_khanh_hoan', 'hoan', 'Cam Khanh Hoan', '')
-INSERT INTO Taikhoan(Tentk, Mk, Tenhienthi, Loai) VALUES ('doan_gia_huan', 'huan', 'Doan Gia Huan', '')
-INSERT INTO Taikhoan(Tentk, Mk, Tenhienthi, Loai) VALUES ('dieu_gia_huan', 'huan', 'Dieu Gia Huan', '')
+INSERT INTO Taikhoan(Tentk, Mk, Tenhienthi, Loai) VALUES ('van_thanh_cong', 'cong', 'Van Thanh Cong', 'staff')
+INSERT INTO Taikhoan(Tentk, Mk, Tenhienthi, Loai) VALUES ('ly_hong_duc', 'duc', 'Ly Hong Duc', 'staff')
+INSERT INTO Taikhoan(Tentk, Mk, Tenhienthi, Loai) VALUES ('thao_ngoc_dung', 'dung', 'Thao Ngoc Dung', 'staff')
+INSERT INTO Taikhoan(Tentk, Mk, Tenhienthi, Loai) VALUES ('dong_khac_duy', 'duy', 'Dong Khac Duy', 'staff')
+INSERT INTO Taikhoan(Tentk, Mk, Tenhienthi, Loai) VALUES ('nham_anh_khoa', 'khoa', 'Nham Anh Khoa', 'staff')
+INSERT INTO Taikhoan(Tentk, Mk, Tenhienthi, Loai) VALUES ('duy_quoc_hai', 'hai', 'Duy Quoc Hai', 'staff')
+INSERT INTO Taikhoan(Tentk, Mk, Tenhienthi, Loai) VALUES ('cam_khanh_hoan', 'hoan', 'Cam Khanh Hoan', 'staff')
+INSERT INTO Taikhoan(Tentk, Mk, Tenhienthi, Loai) VALUES ('doan_gia_huan', 'huan', 'Doan Gia Huan', 'staff')
+INSERT INTO Taikhoan(Tentk, Mk, Tenhienthi, Loai) VALUES ('dieu_gia_huan', 'huan', 'Dieu Gia Huan', 'staff')
 --INSERT BILL
 INSERT INTO Bill(idNhanVien, status, discount, total, creation) VALUES ('8', '1', '20', '172500', '2022/12/17')
 INSERT INTO Bill(idNhanVien, status, discount, total, creation) VALUES ('5', '1', '20', '297500', '2022/12/16')

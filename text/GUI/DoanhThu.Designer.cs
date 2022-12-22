@@ -36,19 +36,18 @@ namespace text
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.dtpkFromDate = new System.Windows.Forms.DateTimePicker();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dtpkToDate = new System.Windows.Forms.DateTimePicker();
+            this.btnEnter = new System.Windows.Forms.Button();
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel1 = new System.Windows.Forms.Panel();
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.dataDataSet1 = new text.DataDataSet();
-            this.btnPrint = new System.Windows.Forms.Button();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.btnEnter = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListBill)).BeginInit();
             this.panel3.SuspendLayout();
@@ -99,7 +98,6 @@ namespace text
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.MediumAquamarine;
-            this.panel3.Controls.Add(this.btnPrint);
             this.panel3.Controls.Add(this.panel7);
             this.panel3.Controls.Add(this.panel6);
             this.panel3.Controls.Add(this.panel5);
@@ -114,13 +112,40 @@ namespace text
             this.panel3.Size = new System.Drawing.Size(1008, 221);
             this.panel3.TabIndex = 8;
             // 
+            // panel7
+            // 
+            this.panel7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel7.BackgroundImage")));
+            this.panel7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel7.Location = new System.Drawing.Point(782, 6);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(223, 109);
+            this.panel7.TabIndex = 9;
+            // 
+            // panel6
+            // 
+            this.panel6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel6.BackgroundImage")));
+            this.panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel6.Location = new System.Drawing.Point(379, 4);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(217, 111);
+            this.panel6.TabIndex = 8;
+            // 
+            // panel5
+            // 
+            this.panel5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel5.BackgroundImage")));
+            this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel5.Location = new System.Drawing.Point(3, 3);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(220, 112);
+            this.panel5.TabIndex = 7;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(147, 136);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(392, 26);
+            this.label1.Size = new System.Drawing.Size(387, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Chọn thời gian muốn xem doanh thu:";
             // 
@@ -151,6 +176,21 @@ namespace text
             this.dtpkToDate.Size = new System.Drawing.Size(146, 28);
             this.dtpkToDate.TabIndex = 4;
             // 
+            // btnEnter
+            // 
+            this.btnEnter.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEnter.Image = ((System.Drawing.Image)(resources.GetObject("btnEnter.Image")));
+            this.btnEnter.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEnter.Location = new System.Drawing.Point(678, 168);
+            this.btnEnter.Name = "btnEnter";
+            this.btnEnter.Size = new System.Drawing.Size(129, 42);
+            this.btnEnter.TabIndex = 5;
+            this.btnEnter.Text = "Thống kê";
+            this.btnEnter.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnEnter.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnEnter.UseVisualStyleBackColor = true;
+            this.btnEnter.Click += new System.EventHandler(this.btnEnter_Click);
+            // 
             // columnHeader3
             // 
             this.columnHeader3.Text = "Ngày vào";
@@ -174,63 +214,6 @@ namespace text
             // 
             this.dataDataSet1.DataSetName = "DOANDataSet";
             this.dataDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // btnPrint
-            // 
-            this.btnPrint.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnPrint.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPrint.Image = ((System.Drawing.Image)(resources.GetObject("btnPrint.Image")));
-            this.btnPrint.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPrint.Location = new System.Drawing.Point(827, 169);
-            this.btnPrint.Name = "btnPrint";
-            this.btnPrint.Size = new System.Drawing.Size(82, 41);
-            this.btnPrint.TabIndex = 6;
-            this.btnPrint.Text = "In";
-            this.btnPrint.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnPrint.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnPrint.UseVisualStyleBackColor = true;
-            // 
-            // panel7
-            // 
-            this.panel7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel7.BackgroundImage")));
-            this.panel7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel7.Location = new System.Drawing.Point(782, 6);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(223, 109);
-            this.panel7.TabIndex = 9;
-            // 
-            // panel6
-            // 
-            this.panel6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel6.BackgroundImage")));
-            this.panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel6.Location = new System.Drawing.Point(379, 4);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(217, 111);
-            this.panel6.TabIndex = 8;
-            // 
-            // panel5
-            // 
-            this.panel5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel5.BackgroundImage")));
-            this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel5.Location = new System.Drawing.Point(3, 3);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(220, 112);
-            this.panel5.TabIndex = 7;
-            // 
-            // btnEnter
-            // 
-            this.btnEnter.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEnter.Image = ((System.Drawing.Image)(resources.GetObject("btnEnter.Image")));
-            this.btnEnter.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEnter.Location = new System.Drawing.Point(678, 168);
-            this.btnEnter.Name = "btnEnter";
-            this.btnEnter.Size = new System.Drawing.Size(129, 42);
-            this.btnEnter.TabIndex = 5;
-            this.btnEnter.Text = "Thống kê";
-            this.btnEnter.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEnter.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnEnter.UseVisualStyleBackColor = true;
-            this.btnEnter.Click += new System.EventHandler(this.btnEnter_Click);
             // 
             // DoanhThu
             // 
@@ -256,7 +239,6 @@ namespace text
 
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button btnPrint;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel5;
