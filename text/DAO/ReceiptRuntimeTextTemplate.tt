@@ -46,17 +46,31 @@
                 <tr>
                     <td><#= row.id #></td>
                     <td><#= row.name #></td>
-                    <td><#= row.unit #></td>
-                    <td><#= row.quantity #></td>
-                    <td><#= row.subtotal #></td>
+                    <td style="text-align: right;"><#= row.unit #></td>
+                    <td style="text-align: right;"><#= row.quantity #></td>
+                    <td style="text-align: right;"><#= row.subtotal #></td>
                 </tr>
               <# } #>
             </tbody>
         </table>
         <hr>
-        <p class="foot"><strong>Total:</strong> <#= Model.total #></p>
-        <p class="foot"><strong>Discount %:</strong> <#= Model.discount #></p>
-        <p class="foot"><strong>Pay amount:</strong> <#= Model.totalAfterDiscount #></p>
+        <table style="margin-left: auto;">
+            <tr>
+                <th>Total:</th>
+                <td style="text-align: right;"><#= Model.total #></td>
+                <td style="text-align:left;"><strong>VND</strong></td>
+            </tr>
+            <tr>
+                <th>Discount %:</th>
+                <td style="text-align: right;"><#= Model.discount #></td>
+                <td style="text-align:left;"><strong>%</strong></td>
+            </tr>
+            <tr>
+                <th>Pay amount:</th>
+                <td style="text-align: right;"><#= Model.totalAfterDiscount #></td>
+                <td style="text-align:left;"><strong>VND</strong></td>
+            </tr>
+        </table>
         <h6 style="text-align:center;">This report is a Receipt print demo for DOANc#, SGU</h6>
         <h6>The report is Company Confidential.</h6>
     </div>

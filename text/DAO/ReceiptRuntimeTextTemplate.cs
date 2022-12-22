@@ -124,21 +124,21 @@ namespace text.DAO
             
             #line default
             #line hidden
-            this.Write("</td>\r\n                    <td>");
+            this.Write("</td>\r\n                    <td style=\"text-align: right;\">");
             
             #line 49 "C:\Users\ACER\Desktop\doancs\text (1)\text\DAO\ReceiptRuntimeTextTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(row.unit));
             
             #line default
             #line hidden
-            this.Write("</td>\r\n                    <td>");
+            this.Write("</td>\r\n                    <td style=\"text-align: right;\">");
             
             #line 50 "C:\Users\ACER\Desktop\doancs\text (1)\text\DAO\ReceiptRuntimeTextTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(row.quantity));
             
             #line default
             #line hidden
-            this.Write("</td>\r\n                    <td>");
+            this.Write("</td>\r\n                    <td style=\"text-align: right;\">");
             
             #line 51 "C:\Users\ACER\Desktop\doancs\text (1)\text\DAO\ReceiptRuntimeTextTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(row.subtotal));
@@ -152,31 +152,42 @@ namespace text.DAO
             
             #line default
             #line hidden
-            this.Write("            </tbody>\r\n        </table>\r\n        <hr>\r\n        <p class=\"foot\"><st" +
-                    "rong>Total:</strong> ");
+            this.Write("            </tbody>\r\n        </table>\r\n        <hr>\r\n        <table style=\"margi" +
+                    "n-left: auto;\">\r\n            <tr>\r\n                <th>Total:</th>\r\n            " +
+                    "    <td style=\"text-align: right;\">");
             
-            #line 57 "C:\Users\ACER\Desktop\doancs\text (1)\text\DAO\ReceiptRuntimeTextTemplate.tt"
+            #line 60 "C:\Users\ACER\Desktop\doancs\text (1)\text\DAO\ReceiptRuntimeTextTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Model.total));
             
             #line default
             #line hidden
-            this.Write("</p>\r\n        <p class=\"foot\"><strong>Discount %:</strong> ");
+            this.Write("</td>\r\n                <td style=\"text-align:left;\"><strong>VND</strong></td>\r\n  " +
+                    "          </tr>\r\n            <tr>\r\n                <th>Discount %:</th>\r\n       " +
+                    "         <td style=\"text-align: right;\">");
             
-            #line 58 "C:\Users\ACER\Desktop\doancs\text (1)\text\DAO\ReceiptRuntimeTextTemplate.tt"
+            #line 65 "C:\Users\ACER\Desktop\doancs\text (1)\text\DAO\ReceiptRuntimeTextTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Model.discount));
             
             #line default
             #line hidden
-            this.Write("</p>\r\n        <p class=\"foot\"><strong>Pay amount:</strong> ");
+            this.Write("</td>\r\n                <td style=\"text-align:left;\"><strong>%</strong></td>\r\n    " +
+                    "        </tr>\r\n            <tr>\r\n                <th>Pay amount:</th>\r\n         " +
+                    "       <td style=\"text-align: right;\">");
             
-            #line 59 "C:\Users\ACER\Desktop\doancs\text (1)\text\DAO\ReceiptRuntimeTextTemplate.tt"
+            #line 70 "C:\Users\ACER\Desktop\doancs\text (1)\text\DAO\ReceiptRuntimeTextTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Model.totalAfterDiscount));
             
             #line default
             #line hidden
-            this.Write("</p>\r\n        <h6 style=\"text-align:center;\">This report is a Receipt print demo " +
-                    "for DOANc#, SGU</h6>\r\n        <h6>The report is Company Confidential.</h6>\r\n    " +
-                    "</div>\r\n</body>\r\n</html>");
+            this.Write(@"</td>
+                <td style=""text-align:left;""><strong>VND</strong></td>
+            </tr>
+        </table>
+        <h6 style=""text-align:center;"">This report is a Receipt print demo for DOANc#, SGU</h6>
+        <h6>The report is Company Confidential.</h6>
+    </div>
+</body>
+</html>");
             return this.GenerationEnvironment.ToString();
         }
         

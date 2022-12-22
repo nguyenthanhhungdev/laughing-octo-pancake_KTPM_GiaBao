@@ -55,9 +55,9 @@
             this.tableLayoutPanel.Name = "tableLayoutPanel";
             this.tableLayoutPanel.RowCount = 2;
             this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 34F));
+            this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel.Size = new System.Drawing.Size(533, 415);
+            this.tableLayoutPanel.Size = new System.Drawing.Size(519, 493);
             this.tableLayoutPanel.TabIndex = 0;
             // 
             // logoPictureBox
@@ -67,7 +67,7 @@
             this.logoPictureBox.Location = new System.Drawing.Point(3, 3);
             this.logoPictureBox.Name = "logoPictureBox";
             this.tableLayoutPanel.SetRowSpan(this.logoPictureBox, 2);
-            this.logoPictureBox.Size = new System.Drawing.Size(94, 409);
+            this.logoPictureBox.Size = new System.Drawing.Size(94, 487);
             this.logoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.logoPictureBox.TabIndex = 12;
             this.logoPictureBox.TabStop = false;
@@ -77,7 +77,7 @@
             // 
             this.okButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.okButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.okButton.Location = new System.Drawing.Point(349, 3);
+            this.okButton.Location = new System.Drawing.Point(335, 3);
             this.okButton.Name = "okButton";
             this.okButton.Size = new System.Drawing.Size(75, 23);
             this.okButton.TabIndex = 24;
@@ -89,7 +89,7 @@
             this.WebViewer.Location = new System.Drawing.Point(103, 3);
             this.WebViewer.MinimumSize = new System.Drawing.Size(20, 20);
             this.WebViewer.Name = "WebViewer";
-            this.WebViewer.Size = new System.Drawing.Size(427, 375);
+            this.WebViewer.Size = new System.Drawing.Size(413, 447);
             this.WebViewer.TabIndex = 25;
             // 
             // flowLayoutPanel1
@@ -101,15 +101,15 @@
             this.flowLayoutPanel1.Controls.Add(this.saveasButton);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(103, 384);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(103, 456);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(427, 28);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(413, 34);
             this.flowLayoutPanel1.TabIndex = 26;
             this.flowLayoutPanel1.WrapContents = false;
             // 
             // printButton
             // 
-            this.printButton.Location = new System.Drawing.Point(268, 3);
+            this.printButton.Location = new System.Drawing.Point(254, 3);
             this.printButton.Name = "printButton";
             this.printButton.Size = new System.Drawing.Size(75, 23);
             this.printButton.TabIndex = 25;
@@ -119,7 +119,7 @@
             // 
             // printPreviewButton
             // 
-            this.printPreviewButton.Location = new System.Drawing.Point(179, 3);
+            this.printPreviewButton.Location = new System.Drawing.Point(165, 3);
             this.printPreviewButton.Name = "printPreviewButton";
             this.printPreviewButton.Size = new System.Drawing.Size(83, 23);
             this.printPreviewButton.TabIndex = 26;
@@ -129,7 +129,7 @@
             // 
             // printSetupButton
             // 
-            this.printSetupButton.Location = new System.Drawing.Point(98, 3);
+            this.printSetupButton.Location = new System.Drawing.Point(84, 3);
             this.printSetupButton.Name = "printSetupButton";
             this.printSetupButton.Size = new System.Drawing.Size(75, 23);
             this.printSetupButton.TabIndex = 27;
@@ -139,7 +139,7 @@
             // 
             // saveasButton
             // 
-            this.saveasButton.Location = new System.Drawing.Point(17, 3);
+            this.saveasButton.Location = new System.Drawing.Point(3, 3);
             this.saveasButton.Name = "saveasButton";
             this.saveasButton.Size = new System.Drawing.Size(75, 23);
             this.saveasButton.TabIndex = 28;
@@ -152,11 +152,13 @@
             this.AcceptButton = this.okButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(551, 433);
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(537, 511);
             this.Controls.Add(this.tableLayoutPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(400, 550);
             this.Name = "ReceiptPreview";
             this.Padding = new System.Windows.Forms.Padding(9);
             this.ShowIcon = false;

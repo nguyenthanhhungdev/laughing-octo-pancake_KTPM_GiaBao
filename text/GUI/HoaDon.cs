@@ -311,7 +311,7 @@ namespace text
                 cashier = Program.CurrentlyLoggedIn.id + " - " + (Program.CurrentlyLoggedIn.username ?? "N/A"),
                 date = System.DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss"),
                 table = ((DbCombobox)Table.SelectedItem).ID + " - " + ((DbCombobox)Table.SelectedItem).Name,
-                discount = Discount.Value + "%",
+                discount = Discount.Value.ToString(),
                 total = Total.Text.ToString(),
                 totalAfterDiscount = Price.Text.ToString(),
                 items = details
