@@ -36,7 +36,6 @@
             this.btn_Hd = new System.Windows.Forms.Button();
             this.btn_dsb = new System.Windows.Forms.Button();
             this.btn_td = new System.Windows.Forms.Button();
-            this.btn_dm = new System.Windows.Forms.Button();
             this.btn_tc = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -61,7 +60,6 @@
             this.panel1.Controls.Add(this.btn_Hd);
             this.panel1.Controls.Add(this.btn_dsb);
             this.panel1.Controls.Add(this.btn_td);
-            this.panel1.Controls.Add(this.btn_dm);
             this.panel1.Controls.Add(this.btn_tc);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -91,7 +89,7 @@
             this.btn_tk.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_tk.Image = ((System.Drawing.Image)(resources.GetObject("btn_tk.Image")));
             this.btn_tk.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_tk.Location = new System.Drawing.Point(0, 610);
+            this.btn_tk.Location = new System.Drawing.Point(0, 550);
             this.btn_tk.Name = "btn_tk";
             this.btn_tk.Size = new System.Drawing.Size(225, 60);
             this.btn_tk.TabIndex = 12;
@@ -105,7 +103,7 @@
             this.btn_dt.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_dt.Image = ((System.Drawing.Image)(resources.GetObject("btn_dt.Image")));
             this.btn_dt.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_dt.Location = new System.Drawing.Point(0, 550);
+            this.btn_dt.Location = new System.Drawing.Point(0, 490);
             this.btn_dt.Name = "btn_dt";
             this.btn_dt.Size = new System.Drawing.Size(225, 60);
             this.btn_dt.TabIndex = 6;
@@ -119,7 +117,7 @@
             this.btn_Hd.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_Hd.Image = ((System.Drawing.Image)(resources.GetObject("btn_Hd.Image")));
             this.btn_Hd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Hd.Location = new System.Drawing.Point(0, 490);
+            this.btn_Hd.Location = new System.Drawing.Point(0, 430);
             this.btn_Hd.Name = "btn_Hd";
             this.btn_Hd.Size = new System.Drawing.Size(225, 60);
             this.btn_Hd.TabIndex = 5;
@@ -133,7 +131,7 @@
             this.btn_dsb.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_dsb.Image = ((System.Drawing.Image)(resources.GetObject("btn_dsb.Image")));
             this.btn_dsb.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_dsb.Location = new System.Drawing.Point(0, 430);
+            this.btn_dsb.Location = new System.Drawing.Point(0, 370);
             this.btn_dsb.Name = "btn_dsb";
             this.btn_dsb.Size = new System.Drawing.Size(225, 60);
             this.btn_dsb.TabIndex = 4;
@@ -147,25 +145,13 @@
             this.btn_td.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_td.Image = ((System.Drawing.Image)(resources.GetObject("btn_td.Image")));
             this.btn_td.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_td.Location = new System.Drawing.Point(0, 370);
+            this.btn_td.Location = new System.Drawing.Point(0, 310);
             this.btn_td.Name = "btn_td";
             this.btn_td.Size = new System.Drawing.Size(225, 60);
             this.btn_td.TabIndex = 3;
             this.btn_td.Text = "Thực Đơn";
             this.btn_td.UseVisualStyleBackColor = true;
             this.btn_td.Click += new System.EventHandler(this.btn_td_Click);
-            // 
-            // btn_dm
-            // 
-            this.btn_dm.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_dm.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_dm.Location = new System.Drawing.Point(0, 310);
-            this.btn_dm.Name = "btn_dm";
-            this.btn_dm.Size = new System.Drawing.Size(225, 60);
-            this.btn_dm.TabIndex = 2;
-            this.btn_dm.Text = "Danh Mục";
-            this.btn_dm.UseVisualStyleBackColor = true;
-            this.btn_dm.Click += new System.EventHandler(this.btn_dm_Click);
             // 
             // btn_tc
             // 
@@ -288,7 +274,6 @@
         private System.Windows.Forms.Button btn_Hd;
         private System.Windows.Forms.Button btn_dsb;
         private System.Windows.Forms.Button btn_td;
-        private System.Windows.Forms.Button btn_dm;
         private System.Windows.Forms.Button btn_tc;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel_body;

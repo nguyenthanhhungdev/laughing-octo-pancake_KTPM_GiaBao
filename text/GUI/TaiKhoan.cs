@@ -29,7 +29,6 @@ namespace text
         public void lamtrong()
         {
             cbb_UserType.Enabled = true;
-
             btn_xoa.Enabled = false;
             btn_sua.Enabled = false;
             btnResetPW.Enabled = false;
@@ -42,6 +41,17 @@ namespace text
 
         public bool chestdata()
         {
+            string tk = txt_UserName.Text;
+            string tenht = txt_Name.Text;
+            string sql = "select Tentk,Tenhienthi from Taikhoan where Tentk= '" + tk + "' or  Tenhienthi='" + tenht + "'";
+            DataTable rs = DataProvider.Instance.ExecuteQuery(sql);
+
+            if (rs.Rows.Count >0)
+            {
+                MessageBox.Show("Tên này đã được sử dụng", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txt_UserName.Focus();
+                return false;
+            }
 
             if (string.IsNullOrEmpty(txt_UserName.Text))
 
@@ -149,10 +159,13 @@ namespace text
             }
             else if (i == 0)
             {
+                lamtrong();
+                cbb_UserType.Enabled = false;
                 MessageBox.Show("Xin lỗi bạn không có quyền admin", "Thống báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
+
                 txt_id.Text = row.Cells[0].Value.ToString();
                 txt_UserName.Text = row.Cells[1].Value.ToString();
                 txt_Name.Text = row.Cells[2].Value.ToString();
@@ -183,7 +196,16 @@ namespace text
 
         private void btn_lammoi_Click(object sender, EventArgs e)
         {
-            lamtrong();
+            if(Quyen == "admin")
+            {
+                lamtrong();
+            }
+            else 
+            {      
+                lamtrong();
+                cbb_UserType.Enabled = false;
+            }
+            
         }
 
         private void btn_sua_Click(object sender, EventArgs e)
@@ -197,10 +219,11 @@ namespace text
                 if (TaikhoanDao.Instance.updatetk(Tentk, Tenht, Loai, id))
                 {
                     MessageBox.Show("Sửa thành công ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    ketcsdl();
+                    ketcsdl(); 
+                    lamtrong();
                 }
             }
-            lamtrong();
+           
         }
     }
 }

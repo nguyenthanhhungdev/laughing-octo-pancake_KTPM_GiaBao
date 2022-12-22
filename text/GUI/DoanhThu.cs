@@ -32,8 +32,7 @@ namespace text
         {
             dtpkFromDate.CustomFormat = "dd-MM-yyyy";
             dtpkToDate.CustomFormat = "dd-MM-yyyy";
-            //string query = string.Format("SELECT * FROM Bill WHERE creation <= '{0}' AND creation >= '{1}'", dtpkToDate.Value, dtpkFromDate.Value);
-            string query = string.Format("SELECT * FROM Bill WHERE creation < '{0}' AND creation >= '{1}'", dtpkToDate.Value.AddDays(1), dtpkFromDate.Value);
+            string query = string.Format("SELECT * FROM Bill WHERE creation <= '{0}' AND creation >= '{1}'", dtpkToDate.Value, dtpkFromDate.Value);
             DataProvider dataProvider = new DataProvider();
             dgvListBill.DataSource = dataProvider.ExecuteQuery(query);
         }

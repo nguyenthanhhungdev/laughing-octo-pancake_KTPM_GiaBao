@@ -51,17 +51,13 @@ namespace text
 
         private void btn_dsb_Click(object sender, EventArgs e)
         {
-
             btn_tc.BackColor  = Color.White;
-            btn_dm.BackColor  = Color.White;
             btn_dsb.BackColor = Color.AntiqueWhite;
             btn_td.BackColor  = Color.White;
             btn_Hd.BackColor  = Color.White;
             btn_dt.BackColor  = Color.White;
             btn_tk.BackColor  = Color.White;
-            
             OpenChidFrom(new DSban(Quyen));
-            
         }
 
        
@@ -69,7 +65,6 @@ namespace text
         private void btn_tc_Click(object sender, EventArgs e)
         {
             btn_tc.BackColor  = Color.AntiqueWhite;
-            btn_dm.BackColor  = Color.White;
             btn_dsb.BackColor = Color.White;
             btn_td.BackColor  = Color.White;
             btn_Hd.BackColor  = Color.White;
@@ -86,7 +81,6 @@ namespace text
         private void btn_dt_Click(object sender, EventArgs e)
         {
             btn_tc.BackColor  = Color.White;
-            btn_dm.BackColor  = Color.White;
             btn_dsb.BackColor = Color.White;
             btn_Hd.BackColor  = Color.White;
             btn_dt.BackColor  = Color.AntiqueWhite;
@@ -98,7 +92,6 @@ namespace text
         private void btn_td_Click(object sender, EventArgs e)
         {
             btn_tc.BackColor  = Color.White;
-            btn_dm.BackColor  = Color.White;
             btn_td.BackColor  = Color.AntiqueWhite;
             btn_dsb.BackColor = Color.White;
             btn_Hd.BackColor  = Color.White;
@@ -111,7 +104,6 @@ namespace text
         {
 
             btn_tc.BackColor  = Color.White;
-            btn_dm.BackColor  = Color.White;
             btn_dsb.BackColor = Color.White;
             btn_Hd.BackColor  = Color.White;
             btn_td.BackColor  = Color.White;
@@ -128,21 +120,9 @@ namespace text
             }
         }
 
-        private void btn_dm_Click(object sender, EventArgs e)
-        {
-            btn_tc.BackColor  = Color.White;
-            btn_dm.BackColor  = Color.AntiqueWhite;
-            btn_dsb.BackColor = Color.White;
-            btn_td.BackColor  = Color.White;
-            btn_Hd.BackColor  = Color.White;
-            btn_dt.BackColor  = Color.White;
-            btn_tk.BackColor  = Color.White;
-        }
-
         private void btn_Hd_Click(object sender, EventArgs e)
         {
             btn_tc.BackColor  = Color.White;
-            btn_dm.BackColor  = Color.White;
             btn_dsb.BackColor = Color.White;
             btn_Hd.BackColor  = Color.AntiqueWhite;
             btn_td.BackColor  = Color.White;
