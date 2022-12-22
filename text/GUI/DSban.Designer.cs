@@ -121,6 +121,7 @@
             // 
             resources.ApplyResources(this.txt_trangthai, "txt_trangthai");
             this.txt_trangthai.AllowDrop = true;
+            this.txt_trangthai.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.txt_trangthai.FormattingEnabled = true;
             this.txt_trangthai.Items.AddRange(new object[] {
             resources.GetString("txt_trangthai.Items"),

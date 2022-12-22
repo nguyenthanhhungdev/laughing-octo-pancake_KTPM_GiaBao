@@ -60,9 +60,10 @@ namespace text
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 289);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 235);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(493, 225);
+            this.pictureBox1.Size = new System.Drawing.Size(370, 183);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
@@ -74,9 +75,10 @@ namespace text
             this.btnEdit.Image = ((System.Drawing.Image)(resources.GetObject("btnEdit.Image")));
             this.btnEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEdit.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnEdit.Location = new System.Drawing.Point(241, 25);
+            this.btnEdit.Location = new System.Drawing.Point(181, 20);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(72, 48);
+            this.btnEdit.Size = new System.Drawing.Size(54, 39);
             this.btnEdit.TabIndex = 6;
             this.btnEdit.Text = "Sửa";
             this.btnEdit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -90,9 +92,10 @@ namespace text
             this.btnRemove.Image = ((System.Drawing.Image)(resources.GetObject("btnRemove.Image")));
             this.btnRemove.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnRemove.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnRemove.Location = new System.Drawing.Point(131, 25);
+            this.btnRemove.Location = new System.Drawing.Point(98, 20);
+            this.btnRemove.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnRemove.Name = "btnRemove";
-            this.btnRemove.Size = new System.Drawing.Size(78, 48);
+            this.btnRemove.Size = new System.Drawing.Size(58, 39);
             this.btnRemove.TabIndex = 5;
             this.btnRemove.Text = "Xóa";
             this.btnRemove.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -102,10 +105,12 @@ namespace text
             // cbbCateGory
             // 
             this.cbbCateGory.AllowDrop = true;
+            this.cbbCateGory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbCateGory.FormattingEnabled = true;
-            this.cbbCateGory.Location = new System.Drawing.Point(229, 158);
+            this.cbbCateGory.Location = new System.Drawing.Point(172, 128);
+            this.cbbCateGory.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbbCateGory.Name = "cbbCateGory";
-            this.cbbCateGory.Size = new System.Drawing.Size(226, 24);
+            this.cbbCateGory.Size = new System.Drawing.Size(170, 21);
             this.cbbCateGory.TabIndex = 7;
             this.cbbCateGory.SelectedIndexChanged += new System.EventHandler(this.cbbCateGory_SelectedIndexChanged);
             // 
@@ -114,9 +119,10 @@ namespace text
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.DarkRed;
             this.label3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label3.Location = new System.Drawing.Point(68, 161);
+            this.label3.Location = new System.Drawing.Point(51, 131);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(70, 16);
+            this.label3.Size = new System.Drawing.Size(59, 13);
             this.label3.TabIndex = 5;
             this.label3.Text = "Danh mục:";
             // 
@@ -125,18 +131,20 @@ namespace text
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.DarkRed;
             this.label2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label2.Location = new System.Drawing.Point(68, 100);
+            this.label2.Location = new System.Drawing.Point(51, 81);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(63, 16);
+            this.label2.Size = new System.Drawing.Size(52, 13);
             this.label2.TabIndex = 4;
             this.label2.Text = "Tên món:";
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(229, 97);
+            this.txtName.Location = new System.Drawing.Point(172, 79);
+            this.txtName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtName.Multiline = true;
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(226, 32);
+            this.txtName.Size = new System.Drawing.Size(170, 27);
             this.txtName.TabIndex = 2;
             // 
             // btnRefresh
@@ -145,9 +153,10 @@ namespace text
             this.btnRefresh.Image = ((System.Drawing.Image)(resources.GetObject("btnRefresh.Image")));
             this.btnRefresh.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnRefresh.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnRefresh.Location = new System.Drawing.Point(334, 25);
+            this.btnRefresh.Location = new System.Drawing.Point(250, 20);
+            this.btnRefresh.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(101, 48);
+            this.btnRefresh.Size = new System.Drawing.Size(76, 39);
             this.btnRefresh.TabIndex = 7;
             this.btnRefresh.Text = "Làm mới";
             this.btnRefresh.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -159,11 +168,12 @@ namespace text
             this.dgvMenu.BackgroundColor = System.Drawing.Color.White;
             this.dgvMenu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMenu.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvMenu.Location = new System.Drawing.Point(0, 100);
+            this.dgvMenu.Location = new System.Drawing.Point(0, 81);
+            this.dgvMenu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvMenu.Name = "dgvMenu";
             this.dgvMenu.RowHeadersWidth = 51;
             this.dgvMenu.RowTemplate.Height = 24;
-            this.dgvMenu.Size = new System.Drawing.Size(529, 514);
+            this.dgvMenu.Size = new System.Drawing.Size(396, 418);
             this.dgvMenu.TabIndex = 6;
             // 
             // btnAdd
@@ -173,9 +183,10 @@ namespace text
             this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
             this.btnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAdd.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnAdd.Location = new System.Drawing.Point(12, 25);
+            this.btnAdd.Location = new System.Drawing.Point(9, 20);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(82, 48);
+            this.btnAdd.Size = new System.Drawing.Size(62, 39);
             this.btnAdd.TabIndex = 1;
             this.btnAdd.Text = "Thêm";
             this.btnAdd.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -195,40 +206,44 @@ namespace text
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.txtName);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(529, 100);
+            this.panel2.Location = new System.Drawing.Point(396, 81);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(493, 514);
+            this.panel2.Size = new System.Drawing.Size(370, 418);
             this.panel2.TabIndex = 5;
             // 
             // txtId
             // 
-            this.txtId.Location = new System.Drawing.Point(229, 31);
+            this.txtId.Location = new System.Drawing.Point(172, 25);
+            this.txtId.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtId.Multiline = true;
             this.txtId.Name = "txtId";
             this.txtId.ReadOnly = true;
-            this.txtId.Size = new System.Drawing.Size(226, 35);
+            this.txtId.Size = new System.Drawing.Size(170, 29);
             this.txtId.TabIndex = 11;
             this.txtId.TextChanged += new System.EventHandler(this.txtId_TextChanged);
             // 
             // ID
             // 
             this.ID.AutoSize = true;
-            this.ID.Location = new System.Drawing.Point(76, 36);
+            this.ID.Location = new System.Drawing.Point(57, 29);
+            this.ID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.ID.Name = "ID";
-            this.ID.Size = new System.Drawing.Size(20, 16);
+            this.ID.Size = new System.Drawing.Size(18, 13);
             this.ID.TabIndex = 10;
             this.ID.Text = "ID";
             // 
             // nudPrice
             // 
-            this.nudPrice.Location = new System.Drawing.Point(229, 215);
+            this.nudPrice.Location = new System.Drawing.Point(172, 175);
+            this.nudPrice.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.nudPrice.Maximum = new decimal(new int[] {
             1000000,
             0,
             0,
             0});
             this.nudPrice.Name = "nudPrice";
-            this.nudPrice.Size = new System.Drawing.Size(226, 22);
+            this.nudPrice.Size = new System.Drawing.Size(170, 20);
             this.nudPrice.TabIndex = 9;
             this.nudPrice.ValueChanged += new System.EventHandler(this.nudPrice_ValueChanged);
             // 
@@ -237,9 +252,10 @@ namespace text
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.Color.DarkRed;
             this.label4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label4.Location = new System.Drawing.Point(76, 220);
+            this.label4.Location = new System.Drawing.Point(57, 179);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(31, 16);
+            this.label4.Size = new System.Drawing.Size(26, 13);
             this.label4.TabIndex = 8;
             this.label4.Text = "Giá:";
             // 
@@ -254,8 +270,9 @@ namespace text
             this.panel1.Controls.Add(this.btnAdd);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1022, 100);
+            this.panel1.Size = new System.Drawing.Size(766, 81);
             this.panel1.TabIndex = 4;
             // 
             // btnSearch
@@ -264,9 +281,10 @@ namespace text
             this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
             this.btnSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSearch.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnSearch.Location = new System.Drawing.Point(840, 25);
+            this.btnSearch.Location = new System.Drawing.Point(630, 20);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(101, 48);
+            this.btnSearch.Size = new System.Drawing.Size(76, 39);
             this.btnSearch.TabIndex = 9;
             this.btnSearch.Text = "Tìm kiếm";
             this.btnSearch.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -275,20 +293,22 @@ namespace text
             // 
             // txtSearchFood
             // 
-            this.txtSearchFood.Location = new System.Drawing.Point(608, 33);
+            this.txtSearchFood.Location = new System.Drawing.Point(456, 27);
+            this.txtSearchFood.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtSearchFood.Multiline = true;
             this.txtSearchFood.Name = "txtSearchFood";
-            this.txtSearchFood.Size = new System.Drawing.Size(226, 35);
+            this.txtSearchFood.Size = new System.Drawing.Size(170, 29);
             this.txtSearchFood.TabIndex = 8;
             // 
             // ThucDon
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1022, 614);
+            this.ClientSize = new System.Drawing.Size(766, 499);
             this.Controls.Add(this.dgvMenu);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "ThucDon";
             this.Text = "ThucDon";
             this.Load += new System.EventHandler(this.ThucDon_Load);
