@@ -25,7 +25,9 @@ namespace text
             dtpkToDate.CustomFormat = "dd-MM-yyyy";
             string query = "SELECT * FROM Bill";
             DataProvider dataProvider = new DataProvider();
-            dgvListBill.DataSource = dataProvider.ExecuteQuery(query);
+            var data = dataProvider.ExecuteQuery(query);
+            UpdateTotal(data);
+            dgvListBill.DataSource = data;
         }
 
         void loadBillList()
@@ -35,9 +37,14 @@ namespace text
             //string query = string.Format("SELECT * FROM Bill WHERE creation <= '{0}' AND creation >= '{1}'", dtpkToDate.Value, dtpkFromDate.Value);
             string query = string.Format("SELECT * FROM Bill WHERE creation < '{0}' AND creation >= '{1}'", dtpkToDate.Value.AddDays(1), dtpkFromDate.Value);
             DataProvider dataProvider = new DataProvider();
-            dgvListBill.DataSource = dataProvider.ExecuteQuery(query);
+            var data = dataProvider.ExecuteQuery(query);
+            UpdateTotal(data);
+            dgvListBill.DataSource = data;
         }
-
+        private void UpdateTotal(DataTable table)
+        {
+            Total.Text = String.Format("{0:n0}", table.AsEnumerable().Sum(row => decimal.Parse(row["total"].ToString())));
+        }
         /*
         void LoadDateTimePickerBill()
         {
