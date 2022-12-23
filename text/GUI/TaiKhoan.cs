@@ -79,7 +79,7 @@ namespace text
         }
         private void ketcsdl()
         {
-            string query = "select  Id ,Tentk as N'Tên tài khoản ',Tenhienthi as N'Tên hiển thị',Loai as 'Loại' from Taikhoan";
+            string query = "select  Id ,Tentk as N'Tên tài khoản ',Tenhienthi as N'Tên hiển thị',Loai as 'Loại' from Taikhoan ORDER BY Loai ASC";
             DataProvider dataProvider = new DataProvider();
             dataGridView1.DataSource = dataProvider.ExecuteQuery(query);
         }

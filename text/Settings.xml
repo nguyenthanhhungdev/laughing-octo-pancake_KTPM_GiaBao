@@ -12,7 +12,7 @@
     <skipLogin>false</skipLogin>
   </behavior>
   <data>
-    <username>admin</username>
-    <password>admin</password>
+    <username>admin1</username>
+    <password>123456</password>
   </data>
 </settings>
