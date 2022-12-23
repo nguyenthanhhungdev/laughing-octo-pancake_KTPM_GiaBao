@@ -14,7 +14,7 @@ GO
 
 CREATE TABLE DSban
 (
-	Id int,
+	Id int IDENTITY PRIMARY KEY,
 	Tinhtrangban nvarchar(50),
 	Tenban nvarchar(50),
 	constraint PK_dsban primary key (Id)
@@ -45,7 +45,9 @@ CREATE TABLE Bill
 	discount INT DEFAULT 0,
 	total FLOAT(53) DEFAULT 0,
 	creation DATE DEFAULT GETDATE(),
-	FOREIGN KEY (idNhanVien) REFERENCES dbo.Taikhoan(Id)
+	idTable INT NOT NULL,
+	FOREIGN KEY (idNhanVien) REFERENCES dbo.Taikhoan(Id),
+	FOREIGN KEY (idTable) REFERENCES dbo.DSban(Id)
 )
 GO
 
