@@ -148,6 +148,10 @@ namespace text
             btn_sua.Enabled = true;
 
             int i;
+            if (e.RowIndex < 0)
+            {
+                return;
+            }
             DataGridViewRow row = this.dataGridView1.Rows[e.RowIndex];
             i = dataGridView1.CurrentRow.Index;
             if (Quyen == "admin")

@@ -36,8 +36,7 @@ namespace text
         void ketnoicsdl()
         {
             string query = "SELECT Id,Tenban as N'Tên bàn',Tinhtrangban as N'Tình trạng bàn' FROM DSban";
-            DataProvider dataProvider = new DataProvider();
-            dataGridView1.DataSource = dataProvider.ExecuteQuery(query);
+            dataGridView1.DataSource = DataProvider.Instance.ExecuteQuery(query);
         }
 
         public bool chestdata()
@@ -144,6 +143,10 @@ namespace text
             
 
             int i;
+            if (e.RowIndex < 0)
+            {
+                return;
+            }
             DataGridViewRow row = this.dataGridView1.Rows[e.RowIndex];
             i = dataGridView1.CurrentRow.Index;
             txt_id.Text = row.Cells[0].Value.ToString();
