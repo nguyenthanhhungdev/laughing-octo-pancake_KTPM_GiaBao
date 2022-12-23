@@ -25,7 +25,6 @@ namespace text
         public DSban()
         {
             InitializeComponent();
-
         }
 
         public DSban(string quyen)
@@ -43,20 +42,14 @@ namespace text
 
         public bool chestdata()
         {
-            if (string.IsNullOrEmpty(txt_id.Text))
-
-            {
-                MessageBox.Show("Bạn  chưa nhập ID", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txt_id.Focus();
-                return false;
-            }
+            
             if (string.IsNullOrEmpty(txt_tenban.Text))
             {
                 MessageBox.Show("Bạn  chưa nhập tên bàn", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txt_tenban.Focus();
                 return false;
             }
-            if (string.IsNullOrEmpty(txt_trangthai.Text))
+            if (txt_trangthai.SelectedIndex == -1)
             {
                 MessageBox.Show("Bạn  chưa nhập trạng thái", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txt_trangthai.Focus();
@@ -73,15 +66,15 @@ namespace text
             btn_them.Enabled = true;
             txt_id.Text = "";
             txt_tenban.Text = "";
-            txt_trangthai.Text = "";
-            txt_id.Focus();
+            //txt_trangthai.Text = "";
+            txt_trangthai.SelectedIndex = 1;
+            txt_tenban.Focus();
         }
         private void DSban_Load(object sender, EventArgs e)
         {
             ketnoicsdl();
             lamtrong();
-
-            txt_id.Focus();
+            txt_tenban.Focus();
         }
 
         private void btn_them_Click(object sender, EventArgs e)
@@ -91,9 +84,8 @@ namespace text
                 if (chestdata())
                 {
                     string name = txt_tenban.Text;
-                    int id = Convert.ToInt32(txt_id.Text);
                     string trangthai = txt_trangthai.Text;
-                    if (DsbanDAO.Instance.insdsb(id, trangthai, name))
+                    if (DsbanDAO.Instance.insdsb(trangthai, name))
                     {
                         MessageBox.Show("Thêm thành công ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         ketnoicsdl();
@@ -146,10 +138,10 @@ namespace text
         }
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            txt_id.Enabled = false;
             btn_them.Enabled = false;
             btn_xoa.Enabled = true;
             btn_sua.Enabled = true;
+            
 
             int i;
             DataGridViewRow row = this.dataGridView1.Rows[e.RowIndex];

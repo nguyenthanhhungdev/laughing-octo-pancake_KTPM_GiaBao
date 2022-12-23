@@ -61,7 +61,7 @@ namespace text
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.pictureBox1.Location = new System.Drawing.Point(0, 235);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(370, 183);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -76,7 +76,7 @@ namespace text
             this.btnEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEdit.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.btnEdit.Location = new System.Drawing.Point(181, 20);
-            this.btnEdit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(2);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(54, 39);
             this.btnEdit.TabIndex = 6;
@@ -93,7 +93,7 @@ namespace text
             this.btnRemove.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnRemove.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.btnRemove.Location = new System.Drawing.Point(98, 20);
-            this.btnRemove.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRemove.Margin = new System.Windows.Forms.Padding(2);
             this.btnRemove.Name = "btnRemove";
             this.btnRemove.Size = new System.Drawing.Size(58, 39);
             this.btnRemove.TabIndex = 5;
@@ -108,7 +108,7 @@ namespace text
             this.cbbCateGory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbCateGory.FormattingEnabled = true;
             this.cbbCateGory.Location = new System.Drawing.Point(172, 128);
-            this.cbbCateGory.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbbCateGory.Margin = new System.Windows.Forms.Padding(2);
             this.cbbCateGory.Name = "cbbCateGory";
             this.cbbCateGory.Size = new System.Drawing.Size(170, 21);
             this.cbbCateGory.TabIndex = 7;
@@ -141,7 +141,7 @@ namespace text
             // txtName
             // 
             this.txtName.Location = new System.Drawing.Point(172, 79);
-            this.txtName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtName.Margin = new System.Windows.Forms.Padding(2);
             this.txtName.Multiline = true;
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(170, 27);
@@ -154,7 +154,7 @@ namespace text
             this.btnRefresh.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnRefresh.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.btnRefresh.Location = new System.Drawing.Point(250, 20);
-            this.btnRefresh.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRefresh.Margin = new System.Windows.Forms.Padding(2);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(76, 39);
             this.btnRefresh.TabIndex = 7;
@@ -169,7 +169,7 @@ namespace text
             this.dgvMenu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMenu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvMenu.Location = new System.Drawing.Point(0, 81);
-            this.dgvMenu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvMenu.Margin = new System.Windows.Forms.Padding(2);
             this.dgvMenu.Name = "dgvMenu";
             this.dgvMenu.RowHeadersWidth = 51;
             this.dgvMenu.RowTemplate.Height = 24;
@@ -184,7 +184,7 @@ namespace text
             this.btnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAdd.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.btnAdd.Location = new System.Drawing.Point(9, 20);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(2);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(62, 39);
             this.btnAdd.TabIndex = 1;
@@ -207,7 +207,7 @@ namespace text
             this.panel2.Controls.Add(this.txtName);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel2.Location = new System.Drawing.Point(396, 81);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(370, 418);
             this.panel2.TabIndex = 5;
@@ -215,7 +215,7 @@ namespace text
             // txtId
             // 
             this.txtId.Location = new System.Drawing.Point(172, 25);
-            this.txtId.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtId.Margin = new System.Windows.Forms.Padding(2);
             this.txtId.Multiline = true;
             this.txtId.Name = "txtId";
             this.txtId.ReadOnly = true;
@@ -235,8 +235,13 @@ namespace text
             // 
             // nudPrice
             // 
+            this.nudPrice.Increment = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
             this.nudPrice.Location = new System.Drawing.Point(172, 175);
-            this.nudPrice.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.nudPrice.Margin = new System.Windows.Forms.Padding(2);
             this.nudPrice.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -270,7 +275,7 @@ namespace text
             this.panel1.Controls.Add(this.btnAdd);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(766, 81);
             this.panel1.TabIndex = 4;
@@ -282,7 +287,7 @@ namespace text
             this.btnSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSearch.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.btnSearch.Location = new System.Drawing.Point(630, 20);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(2);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(76, 39);
             this.btnSearch.TabIndex = 9;
@@ -294,7 +299,7 @@ namespace text
             // txtSearchFood
             // 
             this.txtSearchFood.Location = new System.Drawing.Point(456, 27);
-            this.txtSearchFood.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSearchFood.Margin = new System.Windows.Forms.Padding(2);
             this.txtSearchFood.Multiline = true;
             this.txtSearchFood.Name = "txtSearchFood";
             this.txtSearchFood.Size = new System.Drawing.Size(170, 29);
@@ -308,7 +313,7 @@ namespace text
             this.Controls.Add(this.dgvMenu);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ThucDon";
             this.Text = "ThucDon";
             this.Load += new System.EventHandler(this.ThucDon_Load);

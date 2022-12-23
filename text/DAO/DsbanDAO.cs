@@ -21,10 +21,10 @@ namespace text.DAO
 
         private DsbanDAO() {  }
 
-        public bool insdsb(int id,string tinhtrangban,string tenban)
+        public bool insdsb(string tinhtrangban,string tenban)
         {
 
-            string sql = "insert into Dsban(Id,Tinhtrangban,Tenban) values ('"+id+ "','"+tinhtrangban+"','"+tenban+"')";
+            string sql = "insert into Dsban(Tinhtrangban,Tenban) values ('"+tinhtrangban+"','"+tenban+"')";
             int rs = DataProvider.Instance.ExecuteNonQuery(sql);
 
             return rs>0;

@@ -52,7 +52,6 @@
             // 
             // panel1
             // 
-            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.BackColor = System.Drawing.Color.MediumAquamarine;
             this.panel1.Controls.Add(this.btn_lammoi);
             this.panel1.Controls.Add(this.btn_sua);
@@ -60,39 +59,40 @@
             this.panel1.Controls.Add(this.btn_them);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Cursor = System.Windows.Forms.Cursors.Arrow;
+            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
             // 
             // btn_lammoi
             // 
-            resources.ApplyResources(this.btn_lammoi, "btn_lammoi");
             this.btn_lammoi.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.btn_lammoi, "btn_lammoi");
             this.btn_lammoi.Name = "btn_lammoi";
             this.btn_lammoi.UseVisualStyleBackColor = true;
             this.btn_lammoi.Click += new System.EventHandler(this.btn_lammoi_Click);
             // 
             // btn_sua
             // 
-            resources.ApplyResources(this.btn_sua, "btn_sua");
             this.btn_sua.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_sua.ForeColor = System.Drawing.Color.CornflowerBlue;
+            resources.ApplyResources(this.btn_sua, "btn_sua");
             this.btn_sua.Name = "btn_sua";
             this.btn_sua.UseVisualStyleBackColor = true;
             this.btn_sua.Click += new System.EventHandler(this.btn_sua_Click);
             // 
             // btn_xoa
             // 
-            resources.ApplyResources(this.btn_xoa, "btn_xoa");
             this.btn_xoa.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_xoa.ForeColor = System.Drawing.Color.IndianRed;
+            resources.ApplyResources(this.btn_xoa, "btn_xoa");
             this.btn_xoa.Name = "btn_xoa";
             this.btn_xoa.UseVisualStyleBackColor = true;
             this.btn_xoa.Click += new System.EventHandler(this.btn_xoa_Click);
             // 
             // btn_them
             // 
-            resources.ApplyResources(this.btn_them, "btn_them");
             this.btn_them.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_them.ForeColor = System.Drawing.Color.ForestGreen;
+            resources.ApplyResources(this.btn_them, "btn_them");
             this.btn_them.Name = "btn_them";
             this.btn_them.UseVisualStyleBackColor = true;
             this.btn_them.Click += new System.EventHandler(this.btn_them_Click);
@@ -105,7 +105,6 @@
             // 
             // panel2
             // 
-            resources.ApplyResources(this.panel2, "panel2");
             this.panel2.BackColor = System.Drawing.Color.MediumAquamarine;
             this.panel2.Controls.Add(this.txt_trangthai);
             this.panel2.Controls.Add(this.pictureBox1);
@@ -115,23 +114,24 @@
             this.panel2.Controls.Add(this.txt_tenban);
             this.panel2.Controls.Add(this.txt_id);
             this.panel2.Cursor = System.Windows.Forms.Cursors.Arrow;
+            resources.ApplyResources(this.panel2, "panel2");
             this.panel2.Name = "panel2";
             // 
             // txt_trangthai
             // 
-            resources.ApplyResources(this.txt_trangthai, "txt_trangthai");
             this.txt_trangthai.AllowDrop = true;
             this.txt_trangthai.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.txt_trangthai.FormattingEnabled = true;
             this.txt_trangthai.Items.AddRange(new object[] {
             resources.GetString("txt_trangthai.Items"),
             resources.GetString("txt_trangthai.Items1")});
+            resources.ApplyResources(this.txt_trangthai, "txt_trangthai");
             this.txt_trangthai.Name = "txt_trangthai";
             // 
             // pictureBox1
             // 
-            resources.ApplyResources(this.pictureBox1, "pictureBox1");
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Arrow;
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.TabStop = false;
             // 
@@ -162,14 +162,15 @@
             // 
             resources.ApplyResources(this.txt_id, "txt_id");
             this.txt_id.Name = "txt_id";
+            this.txt_id.ReadOnly = true;
             // 
             // dataGridView1
             // 
-            resources.ApplyResources(this.dataGridView1, "dataGridView1");
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Cursor = System.Windows.Forms.Cursors.Arrow;
+            resources.ApplyResources(this.dataGridView1, "dataGridView1");
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);

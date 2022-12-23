@@ -46,7 +46,7 @@ namespace text
             string sql = "select Tentk,Tenhienthi from Taikhoan where Tentk= '" + tk + "' or  Tenhienthi='" + tenht + "'";
             DataTable rs = DataProvider.Instance.ExecuteQuery(sql);
 
-            if (rs.Rows.Count >0)
+            if (rs.Rows.Count > 0)
             {
                 MessageBox.Show("Tên này đã được sử dụng", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txt_UserName.Focus();
@@ -129,8 +129,13 @@ namespace text
         private void TaiKhoan_Load(object sender, EventArgs e)
         {
             lamtrong();
+            cbb_UserType.SelectedIndex = 1;
             ketcsdl();
             dataGridView1.Columns["id"].Visible = false;
+            if (Quyen != "admin")
+            {
+                cbb_UserType.Enabled = false;
+            }
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -165,14 +170,12 @@ namespace text
             }
             else
             {
-
                 txt_id.Text = row.Cells[0].Value.ToString();
                 txt_UserName.Text = row.Cells[1].Value.ToString();
                 txt_Name.Text = row.Cells[2].Value.ToString();
                 cbb_UserType.Text = row.Cells[3].Value.ToString();
             }
         }
-
         private void btn_them_Click(object sender, EventArgs e)
         {
             if (Quyen == "admin")
@@ -196,16 +199,16 @@ namespace text
 
         private void btn_lammoi_Click(object sender, EventArgs e)
         {
-            if(Quyen == "admin")
+            if (Quyen == "admin")
             {
                 lamtrong();
             }
-            else 
-            {      
+            else
+            {
                 lamtrong();
                 cbb_UserType.Enabled = false;
             }
-            
+
         }
 
         private void btn_sua_Click(object sender, EventArgs e)
@@ -219,11 +222,11 @@ namespace text
                 if (TaikhoanDao.Instance.updatetk(Tentk, Tenht, Loai, id))
                 {
                     MessageBox.Show("Sửa thành công ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    ketcsdl(); 
+                    ketcsdl();
                     lamtrong();
                 }
             }
-           
+
         }
     }
 }

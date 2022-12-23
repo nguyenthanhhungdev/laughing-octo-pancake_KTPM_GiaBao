@@ -164,3 +164,42 @@ C:\Users\ACER\Desktop\doancs\text (1)\text\obj\Debug\text.pdb
 C:\Users\ACER\Desktop\doancs\text (1)\text\obj\Debug\text.GUI.DnDoimk.resources
 C:\Users\ACER\Desktop\doancs\text (1)\text\obj\Debug\text.GUI.ReceiptPreview.resources
 C:\Users\ACER\Desktop\doancs\text (1)\text\obj\Debug\text.GUI.Quenmk.resources
+C:\Users\ACER\Desktop\doancs\laughing-octo-pancake\text\bin\Debug\text.exe.config
+C:\Users\ACER\Desktop\doancs\laughing-octo-pancake\text\bin\Debug\text.exe
+C:\Users\ACER\Desktop\doancs\laughing-octo-pancake\text\bin\Debug\text.pdb
+C:\Users\ACER\Desktop\doancs\laughing-octo-pancake\text\bin\Debug\aa-DJ\text.resources.dll
+C:\Users\ACER\Desktop\doancs\laughing-octo-pancake\text\bin\Debug\aa\text.resources.dll
+C:\Users\ACER\Desktop\doancs\laughing-octo-pancake\text\bin\Debug\vi-VN\text.resources.dll
+C:\Users\ACER\Desktop\doancs\laughing-octo-pancake\text\bin\Debug\Microsoft.Data.Tools.Components.dll
+C:\Users\ACER\Desktop\doancs\laughing-octo-pancake\text\bin\Debug\Microsoft.Data.Tools.Schema.Sql.dll
+C:\Users\ACER\Desktop\doancs\laughing-octo-pancake\text\bin\Debug\Microsoft.Data.Tools.Schema.Sql.UnitTesting.dll
+C:\Users\ACER\Desktop\doancs\laughing-octo-pancake\text\bin\Debug\Microsoft.Data.Tools.Schema.Sql.UnitTestingAdapter.dll
+C:\Users\ACER\Desktop\doancs\laughing-octo-pancake\text\bin\Debug\Microsoft.Data.Tools.Utilities.dll
+C:\Users\ACER\Desktop\doancs\laughing-octo-pancake\text\bin\Debug\Microsoft.SqlServer.TransactSql.ScriptDom.dll
+C:\Users\ACER\Desktop\doancs\laughing-octo-pancake\text\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\ACER\Desktop\doancs\laughing-octo-pancake\text\obj\Debug\text.csproj.AssemblyReference.cache
+C:\Users\ACER\Desktop\doancs\laughing-octo-pancake\text\obj\Debug\text.csproj.SuggestedBindingRedirects.cache
+C:\Users\ACER\Desktop\doancs\laughing-octo-pancake\text\obj\Debug\text.exe.config
+C:\Users\ACER\Desktop\doancs\laughing-octo-pancake\text\obj\Debug\text.GUI.Quenmk.resources
+C:\Users\ACER\Desktop\doancs\laughing-octo-pancake\text\obj\Debug\text.GUI.ReceiptPreview.resources
+C:\Users\ACER\Desktop\doancs\laughing-octo-pancake\text\obj\Debug\text.GUI.DnDoimk.resources
+C:\Users\ACER\Desktop\doancs\laughing-octo-pancake\text\obj\Debug\text.DoanhThu.resources
+C:\Users\ACER\Desktop\doancs\laughing-octo-pancake\text\obj\Debug\text.DatLaiMatKhau.resources
+C:\Users\ACER\Desktop\doancs\laughing-octo-pancake\text\obj\Debug\text.Dangnhap.resources
+C:\Users\ACER\Desktop\doancs\laughing-octo-pancake\text\obj\Debug\text.HoaDon.resources
+C:\Users\ACER\Desktop\doancs\laughing-octo-pancake\text\obj\Debug\text.ThucDon.resources
+C:\Users\ACER\Desktop\doancs\laughing-octo-pancake\text\obj\Debug\text.Trangchu.resources
+C:\Users\ACER\Desktop\doancs\laughing-octo-pancake\text\obj\Debug\text.DSban.resources
+C:\Users\ACER\Desktop\doancs\laughing-octo-pancake\text\obj\Debug\text.Properties.Resources.resources
+C:\Users\ACER\Desktop\doancs\laughing-octo-pancake\text\obj\Debug\text.TaiKhoan.resources
+C:\Users\ACER\Desktop\doancs\laughing-octo-pancake\text\obj\Debug\text.DSban.aa-DJ.resources
+C:\Users\ACER\Desktop\doancs\laughing-octo-pancake\text\obj\Debug\text.DSban.aa.resources
+C:\Users\ACER\Desktop\doancs\laughing-octo-pancake\text\obj\Debug\text.DSban.vi-VN.resources
+C:\Users\ACER\Desktop\doancs\laughing-octo-pancake\text\obj\Debug\text.csproj.GenerateResource.cache
+C:\Users\ACER\Desktop\doancs\laughing-octo-pancake\text\obj\Debug\text.csproj.CoreCompileInputs.cache
+C:\Users\ACER\Desktop\doancs\laughing-octo-pancake\text\obj\Debug\aa-DJ\text.resources.dll
+C:\Users\ACER\Desktop\doancs\laughing-octo-pancake\text\obj\Debug\aa\text.resources.dll
+C:\Users\ACER\Desktop\doancs\laughing-octo-pancake\text\obj\Debug\vi-VN\text.resources.dll
+C:\Users\ACER\Desktop\doancs\laughing-octo-pancake\text\obj\Debug\text.csproj.CopyComplete
+C:\Users\ACER\Desktop\doancs\laughing-octo-pancake\text\obj\Debug\text.exe
+C:\Users\ACER\Desktop\doancs\laughing-octo-pancake\text\obj\Debug\text.pdb
