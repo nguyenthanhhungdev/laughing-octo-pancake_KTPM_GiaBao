@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\text",
+    "\\text\\DAO",
+    "\\text\\GUI"
   ],
-  "SelectedNode": "\\text.sln",
+  "SelectedNode": "\\text\\DAO\\DataProvider.cs",
   "PreviewInSolutionExplorer": false
 }

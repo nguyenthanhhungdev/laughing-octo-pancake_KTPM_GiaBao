@@ -19,7 +19,7 @@ namespace text.DAO
             private set { DataProvider.instance = value; }
         }
         //private string connecString = "Data Source=.\\sqlexpress;Initial Catalog=Data;Integrated Security=True";
-        private string connecString = Program.finalConnectionString;
+        private string connecString = "Data Source=DESKTOP-CQKNKFS\\SQLEXPRESS;Initial Catalog=DOAN;Integrated Security=True";
 
         public DataTable ExecuteQuery(string query)
 
@@ -35,7 +35,7 @@ namespace text.DAO
                 adapter.Fill(data);
                 connection.Close();
             }
-            return data;
+            return data;   
         }
 
         public int ExecuteNonQuery(string query, object[] parameter = null)
